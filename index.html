@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vārddienis WEB v1.2.2</title>
+<link rel="shortcut icon" href="ikona.ico">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile.structure-1.0.min.css">
+<link rel="stylesheet" href="css/jquery.mobile.glossify.theme.css">
+<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+<script src="js/varddienis.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-26532286-1']);
+_gaq.push(['_setDomainName', 'arvislacis.com']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+s.type = 'text/javascript';
+s.async = true;
+s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+t.parentNode.insertBefore(s, t);
+})();
+/* ]]> */
+</script>
+</head>
+<body>
+	<div data-role="page" data-title="Vārddienis WEB" data-theme="e" id="galvenais">
+		<div data-role="header" data-position="fixed" data-theme="a">
+			<h1>Vārddienis WEB v1.2.2</h1>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#galvenais" data-icon="home" class="ui-btn-active">Sākums</a></li>
+					<li><a href="#meklet" data-icon="search">Meklēt</a></li>
+					<li><a href="#atbalsts" data-icon="check" data-rel="dialog" data-transition="slidedown">Atbalstīt</a></li>
+					<li><a href="./palidziba.html#palidziba" rel="external" data-icon="info">Palīdzība</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="content">
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<h3><div class="datums"></div></h3>
+				</div>
+				<div class="ui-block-b">
+					<h3><div class="laiks"></div></h3>
+				</div>
+			</div>
+			<br>
+			<br>
+			<br>
+			<br>
+			<h1><div class="v_d"></div></h1>
+			<hr/>
+			<div class="d_info"></div>
+			<hr/>
+			<h3><div class="svetki"></div></h3>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="a">
+			<h4><a href="#par" data-role="button" data-icon="info" data-rel="dialog" data-transition="slideup">© 2010-2012 Arvis Lācis</a></h4>
+			<h5><a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://vd.arvislacis.com"></a></h5>
+		</div>
+	</div>
+	<div data-role="page" data-title="Vārddienis WEB - Meklēt" data-theme="e" id="meklet">
+		<div data-role="header" data-position="fixed" data-theme="a">
+			<h1>Meklēšana</h1>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#galvenais" data-icon="home">Sākums</a></li>
+					<li><a href="#meklet" data-icon="search" class="ui-btn-active">Meklēt</a></li>
+					<li><a href="#atbalsts" data-icon="check" data-rel="dialog" data-transition="slidedown">Atbalstīt</a></li>
+					<li><a href="./palidziba.html#palidziba" rel="external" data-icon="info">Palīdzība</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="content">
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<h3><div class="datums"></div></h3>
+				</div>
+				<div class="ui-block-b">
+					<h3><div class="laiks"></div></h3>
+				</div>
+			</div>
+			<div data-role="collapsible" data-collapsed="false" data-theme="f">
+				<h3>Meklēt datumu pēc vārda</h3>
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<div data-role="fieldcontain"><label for="mdpv">Ievadiet personvārdu:</label>
+							<input type="text" maxlength="11" id="mdpv" />
+						</div>
+					</div>
+					<div class="ui-block-b">
+						<a href="#" id="mdpvp" data-role="button" data-icon="search" data-theme="g">Atrast datumu</a>
+					</div>
+				</div>
+				<div id="mdpv_i">&nbsp;</div>
+			</div>
+			<div data-role="collapsible" data-theme="f">
+				<h3 id="msod">Meklēt vārdus pēc datuma</h3>
+				<div class="ui-grid-b">
+					<div class="ui-block-a">
+						<div data-role="fieldcontain"><label for="mvpd">Izvēlieties dienu:</label>
+							<input type="range" min="1" max="31" id="mvpd" />
+						</div>
+					</div>
+					<div class="ui-block-b">
+						<div data-role="fieldcontain"><label for="mvpm">Izvēlieties mēnesi:</label>
+							<input type="range" min="1" max="12" id="mvpm" />
+						</div>
+					</div>
+					<div class="ui-block-c">
+						<a href="#" id="mvpdp" data-role="button" data-icon="search" data-theme="g">Atrast vārdus</a>
+					</div>
+				</div>
+				<div id="mvpd_i">&nbsp;</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="a">
+			<h4><a href="#par" data-role="button" data-icon="info" data-rel="dialog" data-transition="slideup">© 2010-2012 Arvis Lācis</a></h4>
+			<h5><a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://vd.arvislacis.com"></a></h5>
+		</div>
+	</div>
+	<div data-role="page" data-title="Vārddienis - Atbalstīt" data-theme="e" id="atbalsts">
+		<div data-role="header" data-position="fixed" data-theme="a">
+			<h1>Atbalstīt</h1>
+		</div>
+		<div data-role="content">
+			<strong>Vārddieņa</strong> un <strong>Vārddieņa WEB</strong> projektu var brīvprātīgi atbalstīt Zelta Zivtiņas (ZZ) un Tele2 lietotāji,
+			veicot ziedojuma pārskaitījumus ar mobilā telefona palīdzību uz numuru (+371) <strong>20308966</strong>.
+			<h3>Informācija:</h3>
+			<div data-role="controlgroup" data-type="horizontal">
+				<a href="http://www.zeltazivtina.lv/lv/uzpildies/papildini-no-citas-zz/papildini-ar-taustinu-kombinaciju" target="_window" data-role="button" data-icon="star" data-theme="f">Zelta Zivtiņas lietotājiem</a>
+				<a href="http://www.zeltazivtina.lv/lv/uzpildies/papildini-savu-zz-no-tele2-rekina/vienreizejs-maksajums" target="_window" data-role="button" data-icon="star" data-theme="b">Tele2 lietotājiem</a>
+			</div>
+			Paldies visiem ziedotājiem!
+			<li>Jūsu vārdi tuvākajā laikā tiks pievienoti šajā sadaļā, kā arī manā topošajā mājas lapā.</li>
+			<li>Papildus Jūs vēlāk saņemsiet arī gaidāmā <strong>Vārddieņa v1.2.0</strong> reģistrācijas atslēgu.</li>
+		</div>
+	</div>
+	<div data-role="page" data-title="Vārddienis - Par..." data-theme="e" id="par">
+		<div data-role="header" data-position="fixed" data-theme="a">
+			<h1>Par...</h1>
+		</div>
+		<div data-role="content">
+			<h3>Vārddienis WEB v1.2.2</h3>
+			<h5>Atjaunināts: <em>2011. gada 26. novembrī</em>.
+			<br>
+			Copyrights © 2010-2012 Arvis Lācis
+			<br>
+			Papildu informācija par projektu un pateicības: <a href="http://arvislacis.com" target="_window">http://arvislacis.com</a></h5>
+			<div data-role="controlgroup" data-type="horizontal">
+				<a href="mailto:arvis.lacis@inbox.lv?subject=V%C4%81rddienis%20WEB" target="_window" data-role="button" data-icon="arrow-r" data-theme="b">E-pasts</a>
+				<a href="http://twitter.com/arvislacis" target="_window" data-role="button" data-icon="star">Twitter</a>
+				<a href="http://varddienis.blogspot.com" target="_window" data-role="button" data-icon="grid">Emuārs</a>
+			</div>
+			<div data-role="controlgroup" data-type="horizontal">
+				<a href="https://bitbucket.org/arvislacis/varddienis_web/overview" target="_window" data-role="button" data-icon="arrow-r">Projekta pirmkods</a>
+				<a href="http://teambox.com/public/varddienis" target="_window" data-role="button" data-icon="refresh">Teambox projekts</a>
+			</div>
+			<h6>Izveidots ar <a href="http://www.pnotepad.org" target="_window">Programmer's Notepad</a>.
+			Powered by <a href="http://jquery.com" target="_window">jQuery</a>
+			and <a href="http://jquerymobile.com" target="_window">jQueryMobile</a>.</h6>
+		</div>
+	</div>
+</body>
+</html>
