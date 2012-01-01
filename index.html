@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vārddienis WEB v1.2.2</title>
+<title>Vārddienis WEB v1.3.0</title>
 <link rel="shortcut icon" href="ikona.ico">
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile.structure-1.0.min.css">
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.0.min.css">
 <link rel="stylesheet" href="css/jquery.mobile.glossify.theme.css">
-<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+<script src="js/jquery-1.6.4.min.js"></script>
 <script src="js/varddienis.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+<script src="js/jquery.mobile-1.0.min.js"></script>
 <script type="text/javascript">
 var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-26532286-1']);
+_gaq.push(['_setAccount', 'UA-24540720-1']);
 _gaq.push(['_setDomainName', 'arvislacis.com']);
 _gaq.push(['_trackPageview']);
 (function() {
@@ -21,22 +21,11 @@ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www')
 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
 </script>
-<script type="text/javascript">
-/* <![CDATA[ */
-(function() {
-var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
-s.type = 'text/javascript';
-s.async = true;
-s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
-t.parentNode.insertBefore(s, t);
-})();
-/* ]]> */
-</script>
 </head>
 <body>
 	<div data-role="page" data-title="Vārddienis WEB" data-theme="e" id="galvenais">
-		<div data-role="header" data-position="fixed" data-theme="a">
-			<h1>Vārddienis WEB v1.2.2</h1>
+		<div data-role="header" data-position="inline" data-theme="a">
+			<h1>Vārddienis WEB v1.3.0</h1>
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#galvenais" data-icon="home" class="ui-btn-active">Sākums</a></li>
@@ -47,6 +36,7 @@ t.parentNode.insertBefore(s, t);
 			</div>
 		</div>
 		<div data-role="content">
+			<a href="http://github.com/arvislacis/varddienis_web" target="_window"><img style="position: absolute; top: 0; right: 0; border: 0;" src="img/github.png" alt="Vārddienis WEB - GitHub"></a>
 			<div class="ui-grid-a">
 				<div class="ui-block-a">
 					<h3><div class="datums"></div></h3>
@@ -67,11 +57,10 @@ t.parentNode.insertBefore(s, t);
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="a">
 			<h4><a href="#par" data-role="button" data-icon="info" data-rel="dialog" data-transition="slideup">© 2010-2012 Arvis Lācis</a></h4>
-			<h5><a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://vd.arvislacis.com"></a></h5>
 		</div>
 	</div>
 	<div data-role="page" data-title="Vārddienis WEB - Meklēt" data-theme="e" id="meklet">
-		<div data-role="header" data-position="fixed" data-theme="a">
+		<div data-role="header" data-position="inline" data-theme="a">
 			<h1>Meklēšana</h1>
 			<div data-role="navbar">
 				<ul>
@@ -83,6 +72,7 @@ t.parentNode.insertBefore(s, t);
 			</div>
 		</div>
 		<div data-role="content">
+			<a href="http://github.com/arvislacis/varddienis_web" target="_window"><img style="position: absolute; top: 0; right: 0; border: 0;" src="img/github.png" alt="Vārddienis WEB - GitHub"></a>
 			<div class="ui-grid-a">
 				<div class="ui-block-a">
 					<h3><div class="datums"></div></h3>
@@ -152,20 +142,19 @@ t.parentNode.insertBefore(s, t);
 			<h1>Par...</h1>
 		</div>
 		<div data-role="content">
-			<h3>Vārddienis WEB v1.2.2</h3>
-			<h5>Atjaunināts: <em>2011. gada 26. novembrī</em>.
+			<h3>Vārddienis WEB v1.3.0</h3>
+			<h5>Atjaunināts: <em>2012. gada 1. janvārī</em>.
 			<br>
 			Copyrights © 2010-2012 Arvis Lācis
-			<br>
-			Papildu informācija par projektu un pateicības: <a href="http://arvislacis.com" target="_window">http://arvislacis.com</a></h5>
+			<br></h5>
 			<div data-role="controlgroup" data-type="horizontal">
 				<a href="mailto:arvis.lacis@inbox.lv?subject=V%C4%81rddienis%20WEB" target="_window" data-role="button" data-icon="arrow-r" data-theme="b">E-pasts</a>
 				<a href="http://twitter.com/arvislacis" target="_window" data-role="button" data-icon="star">Twitter</a>
 				<a href="http://varddienis.blogspot.com" target="_window" data-role="button" data-icon="grid">Emuārs</a>
 			</div>
 			<div data-role="controlgroup" data-type="horizontal">
-				<a href="https://bitbucket.org/arvislacis/varddienis_web/overview" target="_window" data-role="button" data-icon="arrow-r">Projekta pirmkods</a>
-				<a href="http://teambox.com/public/varddienis" target="_window" data-role="button" data-icon="refresh">Teambox projekts</a>
+				<a href="https://github.com/arvislacis/varddienis_web" target="_window" data-role="button" data-icon="arrow-r">Projekta pirmkods</a>
+				<a href="https://teambox.com/public/varddienis" target="_window" data-role="button" data-icon="refresh">Teambox projekts</a>
 			</div>
 			<h6>Izveidots ar <a href="http://www.pnotepad.org" target="_window">Programmer's Notepad</a>.
 			Powered by <a href="http://jquery.com" target="_window">jQuery</a>
