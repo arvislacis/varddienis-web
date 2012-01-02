@@ -1,13 +1,11 @@
 
 # Vārddienis WEB #
 
-----------
 ## Kas ir Vārddienis WEB? ##
 > **Vārddienis WEB** ir īpaši veidota interneta saite *(aplikācija)*, kas pilda ierastās [Vārddieņa](http://dl.dropbox.com/u/25130294/varddienis.zip) funkcijas. *Aplikācija* savā darbībā izmanto jaunākos HTM5 un JavaScript risinājumus - **jQuery** un **jQueryMobile**, kas to padara daudz pievilcīgāku un ērtāk lietojamu ikvienam datora lietotājam.
 
 > Šis projekts tika izveidots, lai ļautu [Vārddieni](http://dl.dropbox.com/u/25130294/varddienis.zip) izmantot arī mobilajās ierīcēs *(Android, Symbian, iPhone, J2ME, ...)*, kā arī Linux un Mac datoros, kam iepriekš šāda iespēja nebija pieejama.
 
-----------
 ## Saderīgās ierīces ##
 > **Vārddieni WEB var izmantot lielākajā daļā ierīču un pārlūkprogrammu** *(mobilajos telefonos, datoros, planšetdatoros u.c.)*, kas atbalsta jaunākos HTML un JavaScript standartus. Jāpiebilst, ka daži dizaina elementi un animācijas ierīcēs var tikt attēloti daļēji vai arī var netikt attēloti, tādēļ apstiprināts saraksts ar atbalstītajām platformām un pārlūkprogrammām apskatāms šeit: [http://jquerymobile.com/gbs](http://jquerymobile.com/gbs).
 
@@ -19,7 +17,6 @@ Pazīstamāko pārlūkprogrammu atbalsts:
 - Internet Explorer 7+;
 - Opera Mobile 11.0+.
 
-----------
 ## Lietošanas noteikumi ##
 > **Vārddienis WEB** ir un būs bezmaksas projekts, kura attīstību veicinās gan Jūsu sniegtie ziedojumi, gan izteiktie komentāri, viedokļi un ierosinājumi, gan mana paša vēlme to pilnveidot un uzlabot, un izmainīt.
 
@@ -27,11 +24,9 @@ Pazīstamāko pārlūkprogrammu atbalsts:
 
 > Lūgums Jūsu izstrādājumā, ja tādu izveidosiet, tomēr ietvert kādas norādes uz šo saiti, autoru, kā arī par savu veikumu man pastāstīt vairāk.
 
-----------
 ## Ko iesākt, ja esat pamanījis kļūdu? ##
 > Šo projektu pagaidām izstrādāju tikai es ***(Arvis Lācis)***, protams, ka reizi pa reizītei arī es, kā jau cilvēks, kļūdos vai arī nepamanu kādu mazu niansi skriptā, tādēļ aicinu ikvienu atrastās kļūdas norādīt šīs lapas *[Issues sadaļā](https://github.com/arvislacis/varddienis_web/issues)*.
 
-----------
 ## Izmantotie resursi (atsauces) ##
 Projekta veidošanā izmantotās programmas un servisi:
 
