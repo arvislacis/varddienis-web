@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vārddienis WEB v1.3.0</title>
+<title>Vārddienis WEB</title>
 <link rel="shortcut icon" href="ikona.ico">
 <link rel="stylesheet" href="css/jquery.mobile.structure-1.0.min.css">
 <link rel="stylesheet" href="css/jquery.mobile.glossify.theme.css">
@@ -13,7 +13,6 @@
 <script type="text/javascript">
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-24540720-1']);
-_gaq.push(['_setDomainName', 'arvislacis.com']);
 _gaq.push(['_trackPageview']);
 (function() {
 var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
@@ -24,14 +23,15 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 </head>
 <body>
 	<div data-role="page" data-title="Vārddienis WEB" data-theme="e" id="galvenais">
-		<div data-role="header" data-position="inline" data-theme="a">
-			<h1>Vārddienis WEB v1.3.0</h1>
+		<div data-role="header" data-theme="a">
+			<a href="#info" data-type="button" data-icon="alert" data-rel="dialog" data-transition="slidedown">Tev tas noteikti ir jāzin!</a>
+			<h1>Vārddienis WEB v1.4.0</h1>
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#galvenais" data-icon="home" class="ui-btn-active">Sākums</a></li>
 					<li><a href="#meklet" data-icon="search">Meklēt</a></li>
 					<li><a href="#atbalsts" data-icon="check" data-rel="dialog" data-transition="slidedown">Atbalstīt</a></li>
-					<li><a href="./palidziba.html#palidziba" rel="external" data-icon="info">Palīdzība</a></li>
+					<li><a href="https://github.com/arvislacis/varddienis_web" data-icon="info" title="Pēc atvēršanas skatīt README.md failu">Palīdzība</a></li>
 				</ul>
 			</div>
 		</div>
@@ -60,14 +60,15 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 		</div>
 	</div>
 	<div data-role="page" data-title="Vārddienis WEB - Meklēt" data-theme="e" id="meklet">
-		<div data-role="header" data-position="inline" data-theme="a">
+		<div data-role="header" data-theme="a">
+			<a href="#info" data-type="button" data-icon="alert" data-rel="dialog" data-transition="slidedown">Tev tas noteikti ir jāzin!</a>
 			<h1>Meklēšana</h1>
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#galvenais" data-icon="home">Sākums</a></li>
 					<li><a href="#meklet" data-icon="search" class="ui-btn-active">Meklēt</a></li>
 					<li><a href="#atbalsts" data-icon="check" data-rel="dialog" data-transition="slidedown">Atbalstīt</a></li>
-					<li><a href="./palidziba.html#palidziba" rel="external" data-icon="info">Palīdzība</a></li>
+					<li><a href="https://github.com/arvislacis/varddienis_web" data-icon="info" title="Pēc atvēršanas skatīt README.md failu">Palīdzība</a></li>
 				</ul>
 			</div>
 		</div>
@@ -117,11 +118,10 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="a">
 			<h4><a href="#par" data-role="button" data-icon="info" data-rel="dialog" data-transition="slideup">© 2010-2012 Arvis Lācis</a></h4>
-			<h5><a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://vd.arvislacis.com"></a></h5>
 		</div>
 	</div>
-	<div data-role="page" data-title="Vārddienis - Atbalstīt" data-theme="e" id="atbalsts">
-		<div data-role="header" data-position="fixed" data-theme="a">
+	<div data-role="page" data-title="Vārddienis WEB - Atbalstīt" data-theme="e" id="atbalsts">
+		<div data-role="header" data-theme="a">
 			<h1>Atbalstīt</h1>
 		</div>
 		<div data-role="content">
@@ -133,17 +133,31 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 				<a href="http://www.zeltazivtina.lv/lv/uzpildies/papildini-savu-zz-no-tele2-rekina/vienreizejs-maksajums" target="_window" data-role="button" data-icon="star" data-theme="b">Tele2 lietotājiem</a>
 			</div>
 			Paldies visiem ziedotājiem!
-			<li>Jūsu vārdi tuvākajā laikā tiks pievienoti šajā sadaļā, kā arī manā topošajā mājas lapā.</li>
-			<li>Papildus Jūs vēlāk saņemsiet arī gaidāmā <strong>Vārddieņa v1.2.0</strong> reģistrācijas atslēgu.</li>
 		</div>
 	</div>
-	<div data-role="page" data-title="Vārddienis - Par..." data-theme="e" id="par">
-		<div data-role="header" data-position="fixed" data-theme="a">
+	<div data-role="page" data-title="Vārddienis WEB - Tev tas noteikti ir jāzin!" data-theme="e" id="info">
+		<div data-role="header" data-theme="a">
+			<h1>Tev tas noteikti ir jāzin!</h1>
+		</div>
+		<div data-role="content">
+			<ul data-role="listview" data-inset="true" data-theme="e" data-divider-theme="b">
+				<li data-role="list-divider">Noderīga informācija</li>
+				<li>Vārddieni WEB var atvērt arī izmantojot adresi http://ej.uz/alvd.</li>
+				<li data-role="list-divider">Fakti un skaitļi</li>
+				<li>Šis ir atvērtā pirmkoda projekts.</li>
+				<li>Galvenais darbības skripts <em>(varddienis.js)</em> ir vairāk nekā 350 rindiņu garš, nesaspiestā formātā.</li>
+				<li>Visu projektā iekļauto failu kopējais lielums ir ~300 kB.</li>
+				<li>Viss ir izveidots, izmantojot salīdzinoši vienkāršus teksta redaktorus - Programmer's Notepad un Notepad++.</li>
+			</ul>
+		</div>
+	</div>
+	<div data-role="page" data-title="Vārddienis WEB - Par..." data-theme="e" id="par">
+		<div data-role="header" data-theme="a">
 			<h1>Par...</h1>
 		</div>
 		<div data-role="content">
-			<h3>Vārddienis WEB v1.3.0</h3>
-			<h5>Atjaunināts: <em>2012. gada 1. janvārī</em>.
+			<h3>Vārddienis WEB v1.4.0</h3>
+			<h5>Atjaunināts: <em>2012. gada 2. janvārī</em>.
 			<br>
 			Copyrights © 2010-2012 Arvis Lācis
 			<br></h5>
