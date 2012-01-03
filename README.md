@@ -42,5 +42,6 @@ Citi projekti un elementi:
 - [jQueryMobile](http://jquerymobile.com) (1.0)
 - [jQuery](http://jquery.com) (1.6.4)
 - [Glossify noformējums](http://www.mobjectify.com/resources/Glossify_theme_for_jquery_mobile/)
+- [JavaScript Compressor](http://www.minifyjavascript.com/)
 - [GitHub Ribbon (josla)](https://github.com/blog/273-github-ribbons)
 - [Dropbox](http://dropbox.com) (1.2.49)
