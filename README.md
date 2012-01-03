@@ -34,8 +34,10 @@ Projekta veidošanā izmantotās programmas un servisi:
 - [Programmer's Notepad](http://www.pnotepad.org/) (2.3.4)
 - [Git](http://git-scm.com/) (1.7.8.2)
 - [MarkdownPad](http://markdownpad.com) (1.1.3.0)
+- [Easy Feed Editor](http://sourceforge.net/projects/easyfeededitor/)
 - [Opera](http://www.opera.com) (11.60)
 - [Notepad++](http://notepad-plus-plus.org/) (5.9.6.2)
+- [PSPad](http://www.pspad.com/en/) (4.5.6)
 
 Citi projekti un elementi:
 

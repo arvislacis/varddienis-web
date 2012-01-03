@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel>
+<generator>Easy Feed Editor</generator>
+<title>Vārddienis WEB</title>
+<description></description>
+<link>http://dl.dropbox.com/u/25130294/varddienis_web/index.html</link>
+<copyright>&#169; 2011-2012 Arvis Lācis</copyright>
+<language>lv</language>
+<pubDate>Tue, 03 Jan 2012 17:29:52 GMT</pubDate>
+<managingEditor>Arvis Lācis</managingEditor>
+
+<item>
+<title>Vārddienim WEB pievienota RSS padeve</title>
+<description><![CDATA[<p>
+	Visi ar <strong>Vārddieni WEB</strong> saistītie jaunumi <em>(tikai galvenie un svarīgākie)</em> tagad pieejami arī pievienotajā RSS padevē: <a href="http://dl.dropbox.com/u/25130294/varddienis_web/rss.xml">http://dl.dropbox.com/u/25130294/varddienis_web/rss.xml</a></p>
+<p>
+	Lai izdodas nepalaist garām nevienu <strong>Vārddieņa WEB</strong> uzlabojumu un papildinājumu. ;)<br />
+	&nbsp;</p>
+]]></description>
+<link>http://dl.dropbox.com/u/25130294/varddienis_web/rss.xml</link>
+<author>Arvis Lācis</author>
+<category>jaunumi</category>
+<category>uzlabojumi</category>
+<category>RSS</category>
+<guid  isPermaLink="false">13dcfc69-eec6-4679-a299-d60d848582fa</guid>
+<pubDate>Tue, 03 Jan 2012 17:29:49 GMT</pubDate>
+</item>
+</channel>
+</rss>
