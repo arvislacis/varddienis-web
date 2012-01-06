@@ -270,7 +270,7 @@ function sodiena() {
 	$(".svetki").html("<span class='sv'>" + sve + "</span><span class='at'>" + atz + "</span>");
 	
 	nof();
-	setTimeout("sodiena()", 1000);
+	setTimeout(sodiena, 1000);
 }
 
 // MDPV fn

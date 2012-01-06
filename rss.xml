@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
 <channel>
 <generator>Easy Feed Editor</generator>
@@ -7,8 +7,27 @@
 <link>http://dl.dropbox.com/u/25130294/varddienis_web/index.html</link>
 <copyright>&#169; 2011-2012 Arvis Lācis</copyright>
 <language>lv</language>
-<pubDate>Tue, 03 Jan 2012 17:29:52 GMT</pubDate>
+<pubDate>Tue, 03 Jan 2012 21:21:58 GMT</pubDate>
 <managingEditor>Arvis Lācis</managingEditor>
+
+<item>
+<title>Nedaudz par to, kā iespējams atvērt Vārddieni WEB.</title>
+<description><![CDATA[<p>
+	Pa&scaron;laik <strong>Vārddieni WEB</strong> ir iespējams atvērt, izmantojot trīs dažāda veida saites:</p>
+<ol>
+	<li>
+		<a href="http://dl.dropbox.com/u/25130294/varddienis_web/index.html">http://dl.dropbox.com/u/25130294/varddienis_web/index.html</a> - galvenā saite, tas ir, saite, kuru būs iespējams atvērt jebkad un jebkur <em>(par to esmu par aptuveni 95% dro&scaron;s)</em>;</li>
+	<li>
+		<a href="http://ej.uz/alvd">http://ej.uz/alvd</a> - saīsināta iepriek&scaron; minētā <a href="http://dropbox.com">Dropbox</a> saite, lai atvieglotu jūsu dzīvi atcerēties garo <strong>Vārddieņa WEB</strong> adresi. <strong>#alvd</strong>=<strong>A</strong>rvja <strong>L</strong>āča <strong>V</strong>ārd<strong>D</strong>ienis;</li>
+	<li>
+		<a href="http://vd.arvislacis.com">http://vd.arvislacis.com</a> - iepriek&scaron;ējā <strong>Vārddieņa WEB</strong> saite, kura pagaidām <em>(kamēr man vēl piederēs domēna vārds arvislacis.com)</em> novirzīs visus apmeklētājus uz jauno Dropbox lapu.</li>
+</ol>
+]]></description>
+<link>http://ej.uz/alvd</link>
+<author>Arvis Lācis</author>
+<guid  isPermaLink="false">8906f786-4ade-4e60-8b10-d56829ac9192</guid>
+<pubDate>Tue, 03 Jan 2012 21:21:49 GMT</pubDate>
+</item>
 
 <item>
 <title>Vārddienim WEB pievienota RSS padeve</title>
