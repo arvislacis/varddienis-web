@@ -35,15 +35,16 @@ Projekta veidošanā izmantotās programmas un servisi:
 - [Git](http://git-scm.com/) (1.7.8.2)
 - [MarkdownPad](http://markdownpad.com) (1.1.3.0)
 - [Easy Feed Editor](http://sourceforge.net/projects/easyfeededitor/)
+- [Dropbox](http://dropbox.com) (1.2.49)
+- [RegExr](http://www.gskinner.com/RegExr/) (0.3.1b)
+- [JavaScript Compressor](http://www.minifyjavascript.com/)
 - [Opera](http://www.opera.com) (11.60)
 - [Notepad++](http://notepad-plus-plus.org/) (5.9.6.2)
 - [PSPad](http://www.pspad.com/en/) (4.5.6)
 
-Citi projekti un elementi:
+Iekļautie projekti, resursi:
 
 - [jQueryMobile](http://jquerymobile.com) (1.0)
 - [jQuery](http://jquery.com) (1.6.4)
 - [Glossify noformējums](http://www.mobjectify.com/resources/Glossify_theme_for_jquery_mobile/)
-- [JavaScript Compressor](http://www.minifyjavascript.com/)
 - [GitHub Ribbon (josla)](https://github.com/blog/273-github-ribbons)
-- [Dropbox](http://dropbox.com) (1.2.49)
