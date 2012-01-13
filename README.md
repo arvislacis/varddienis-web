@@ -31,15 +31,16 @@ Pazīstamāko pārlūkprogrammu atbalsts:
 Projekta veidošanā izmantotās programmas un servisi:
 
 - [GitHub](https://github.com/)
+- [RJ TextEd](http://rj-texted.se/) (7.81)
 - [Programmer's Notepad](http://www.pnotepad.org/) (2.3.4)
 - [Git](http://git-scm.com/) (1.7.8.2)
-- [MarkdownPad](http://markdownpad.com) (1.1.3.0)
-- [Easy Feed Editor](http://sourceforge.net/projects/easyfeededitor/)
+- [MarkdownPad](http://markdownpad.com) (1.1.4.0)
+- [Easy Feed Editor](http://sourceforge.net/projects/easyfeededitor/) (3.5.2.0)
 - [Dropbox](http://dropbox.com) (1.2.49)
 - [RegExr](http://www.gskinner.com/RegExr/) (0.3.1b)
 - [JavaScript Compressor](http://www.minifyjavascript.com/)
 - [Opera](http://www.opera.com) (11.60)
-- [Notepad++](http://notepad-plus-plus.org/) (5.9.6.2)
+- [Notepad++](http://notepad-plus-plus.org/) (5.9.8)
 - [PSPad](http://www.pspad.com/en/) (4.5.6)
 
 Iekļautie projekti, resursi:

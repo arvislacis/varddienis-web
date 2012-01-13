@@ -94,11 +94,11 @@ function nof() {
 	$(".v").css({"color" : "blue", "font-weight" : "bold"});
 	$(".sv").css({"color" : "darkred"});
 	$(".at").css({"color" : "dargrey", "font-style" : "italic"});
-	
+
 	$(".datums").css({"text-align" : "left"});
 	$(".laiks").css({"text-align" : "right"});
 	$(".v_d, .d_info, .svetki, .tikli, #mdpv, #mdpv_i, #mvpd_i").css({"text-align" : "center"});
-	
+
 	$(".d2").css({"font-weight" : "bold"});
 }
 
@@ -114,8 +114,8 @@ function sodiena() {
 		min = d.getMinutes(),
 		sek = d.getSeconds(),
 		snr = d_sk[men] + die,
-		sod = v[d_sk[men] + die].replace(/(?!^)[A-Z]/g, ", $&"),
-		rit = v[d_sk[men] + die + 1].replace(/(?!^)[A-Z]/g, ", $&"),
+		sod = v[d_sk[men] + die].replace(/(?!^)[A-ZĀČĒĢĪĶĻŅŠŪŽ]/g, ", $&"),
+		rit = v[d_sk[men] + die + 1].replace(/(?!^)[A-ZĀČĒĢĪĶĻŅŠŪŽ]/g, ", $&"),
 		die_g,
 		atl_d,
 		gal1 = "šas",
@@ -129,14 +129,14 @@ function sodiena() {
 	if (min < 10) {
 		min = "0" + min;
 	}
-	
+
 	if (sek < 10) {
 		sek = "0" + sek;
 	}
-	
+
 	$(".datums").html(ned_d[n_d] + ", " + gads + ". gada " + die + ". " + menesi[men]);
 	$(".laiks").html(stu + ":" + min + ":" + sek);
-	
+
 	// Garais, īsais gads
 	if (gads % 4 === 0) {
 		if (gads % 100 === 0) {
@@ -151,7 +151,7 @@ function sodiena() {
 	} else {
         gada_i = 1;
 	}
-	
+
 	// Vārda dienu izvadīšana
 	if (gada_i === 0 && men === 1 && die === 28) {
 		$(".v_d").html("Šodien vārda dienu svin <span class='v'>" + sod + ".</span><br />Rīt vārda dienu neviens nesvinēs.");
@@ -162,7 +162,7 @@ function sodiena() {
 			$(".v_d").html("Šodien vārda dienu svin <span class='v'>" + sod + ".</span><br />Rīt vārda dienu svinēs <span class='v'>" + rit + ".</span>");
 		}
 	}
-	
+
 	// Dienas informācija
 	if (gada_i === 0) {
 		if (men > 1) {
@@ -176,26 +176,26 @@ function sodiena() {
 		die_g = snr + 1;
 		atl_d = 365 - die_g;
 	}
-	
+
 	if (atl_d % 10 === 1 && atl_d % 100 !== 11) {
 		gal1 = "si";
 		gal2 = "";
 	}
-	
+
 	$(".d_info").html("Gada <span class='d2'>" + die_g + "</span>. diena. Līdz gada beigām atliku" + gal1 + " <span class='d2'>" + atl_d + "</span> diena" + gal2 + ".");
-	
+
 	if (men === 2 && die > 23 && die < 31 && n_d === 6 && stu > 15) {
 		$(".d_info").html($(".d_info").html() + "<br/><strong>Neaizmirstiet šonakt pagriezt pulksteņus vienu stundu uz priekšu</strong>.");
 	}
 	if (men === 9 && die > 23 && die < 31 && n_d === 6 && stu > 15) {
 		$(".d_info").html($(".d_info").html() + "<br/><strong>Neaizmirstiet šonakt pagriezt pulksteņus vienu stundu atpakaļ</strong>.");
 	}
-	
+
 	// Svētki
 	if (sv_d[snr] !== undefined) {
 		sve = sv_d[snr] + "<br/>";
 	}
-	
+
 	if (men === 4 && die > 7 && die < 15 && n_d === 0) {
 		sve = sve + "Mātes diena<br/>";
 	}
@@ -214,7 +214,7 @@ function sodiena() {
 	if (snr === 321) {
 		sve = sve + "Latvijas Republikas Proklamēšanas diena (" + (gads - 1918) + ". gadadiena)<br/>";
 	}
-	
+
 	if (at_d[snr] !== undefined) {
 		atz = at_d[snr] + "<br/>";
 	}
@@ -262,13 +262,13 @@ function sodiena() {
 	if (men === 11 && die > 0 && die < 8 && n_d === 0) {
 		atz = atz + "Pret latviešu tautu vērstā totalitārā komunistiskā režīma genocīda upuru piemiņas diena<br/>";
 	}
-	
+
 	if (die === 13 && n_d === 5) {
 		atz = atz + "Melnā piektdiena<br/>";
 	}
-	
+
 	$(".svetki").html("<span class='sv'>" + sve + "</span><span class='at'>" + atz + "</span>");
-	
+
 	nof();
 	setTimeout(sodiena, 1000);
 }
@@ -276,16 +276,16 @@ function sodiena() {
 // MDPV fn
 function mdpv() {
 	var pv, pvm, pvp, i, i2, m, r;
-	
+
 	if ($("#mdpv").val() === "") {
 		$("#mdpv_i").html("&nbsp;");
 	} else {
 		pv = $("#mdpv").val();
 		pvm = pv.toLowerCase();
 		pvp = pvm.charAt(0).toUpperCase() + pvm.slice(1);
-		
-		m = new RegExp(pvp + "(?=[A-Z]|$)");
-		
+
+		m = new RegExp(pvp + "(?=[A-ZĀČĒĢĪĶĻŅŠŪŽ]|$)");
+
 		for (i = 0; i < 365; i++) {
 			if ((r = m.exec(v[i])) !== null) {
 				for (i2 = 0; i2 < 13; i2++) {
@@ -299,7 +299,7 @@ function mdpv() {
 				break;
 			}
 		}
-		
+
 		if (i === 365) {
 			$("#mdpv_i").html("<span class='v'>" + pvp + "</span> savu vārda dienu svin <span class='d2'>22. maijā</span> vai arī šāds vārds neeksistē.");
 			nof();
@@ -310,10 +310,10 @@ function mdpv() {
 // MVPD fn
 function mvpd() {
 	var d, m;
-	
+
 	d = parseInt($("#mvpd").val(), 0);
 	m = parseInt($("#mvpm").val(), 0);
-	
+
 	if ((m === 4 && d === 31) || (m === 6 && d === 31) || (m === 9 && d === 31) || (m === 11 && d === 31)) {
 		$("#mvpd").val(30).slider("refresh");
 		d = 30;
@@ -321,7 +321,7 @@ function mvpd() {
 		$("#mvpd").val(28).slider("refresh");
 		d = 28;
 	}
-	
+
 	$("#mvpd_i").fadeOut(400, function () {
 		$(this).html("<span class='d2'>" + d + ". " + menIn[m - 1] + "</span> savu vārda dienu svin <span class='v'>"  + (v[d_sk[m - 1] + d]).replace(/(?!^)[A-Z]/g, ", $&") + "</span>.").fadeIn(800, nof());
 	});
@@ -331,28 +331,28 @@ function mvpd() {
 $(function () {
 	sodiena();
 	nof();
-	
+
 	$("a").click(function () {
 		$(this).fadeTo("slow", 0.5).fadeTo("def", 1);
 	});
-	
+
 	$("#mdpv").keyup(function () {
 		mdpv();
 	});
-	
+
 	$("#mdpvp").click(function () {
 		mdpv();
 	});
-	
+
 	$("#msod").click(function () {
 		var	d = new Date(),
 			men = d.getMonth() + 1,
 			die = d.getDate();
-		
+
 		$("#mvpd").val(die).slider("refresh");
 		$("#mvpm").val(men).slider("refresh");
 	});
-	
+
 	$("#mvpdp").click(function () {
 		mvpd();
 	});
