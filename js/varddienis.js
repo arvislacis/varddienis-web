@@ -115,7 +115,9 @@ function sodiena() {
 		sek = d.getSeconds(),
 		snr = d_sk[men] + die,
 		sod = v[d_sk[men] + die].replace(/(?!^)[A-ZĀČĒĢĪĶĻŅŠŪŽ]/g, ", $&"),
+		sods = sod.replace(/[A-ZĀČĒĢĪĶĻŅŠŪŽ][a-zāčēģīķļņšūž]*/g, "<a href='http://personvardi.lv/skaidrojumi/$&/'>$&</a>"),
 		rit = v[d_sk[men] + die + 1].replace(/(?!^)[A-ZĀČĒĢĪĶĻŅŠŪŽ]/g, ", $&"),
+		rits = rit.replace(/[A-ZĀČĒĢĪĶĻŅŠŪŽ][a-zāčēģīķļņšūž]*/g, "<a href='http://personvardi.lv/skaidrojumi/$&/'>$&</a>"),
 		die_g,
 		atl_d,
 		gal1 = "šas",
@@ -154,12 +156,12 @@ function sodiena() {
 
 	// Vārda dienu izvadīšana
 	if (gada_i === 0 && men === 1 && die === 28) {
-		$(".v_d").html("Šodien vārda dienu svin <span class='v'>" + sod + ".</span><br />Rīt vārda dienu neviens nesvinēs.");
+		$(".v_d").html("Šodien vārda dienu svin <span class='v'>" + sods + ".</span><br />Rīt vārda dienu neviens nesvinēs.");
 	} else {
 		if (gada_i === 0 && men === 1 && die === 29) {
-			$(".v_d").html("Šodien vārda dienu neviens nesvin.<br/>Rīt vārda dienu svinēs <span class='v'>" + sod + ".</span>");
+			$(".v_d").html("Šodien vārda dienu neviens nesvin.<br/>Rīt vārda dienu svinēs <span class='v'>" + sods + ".</span>");
 		} else {
-			$(".v_d").html("Šodien vārda dienu svin <span class='v'>" + sod + ".</span><br />Rīt vārda dienu svinēs <span class='v'>" + rit + ".</span>");
+			$(".v_d").html("Šodien vārda dienu svin <span class='v'>" + sods + ".</span><br />Rīt vārda dienu svinēs <span class='v'>" + rits + ".</span>");
 		}
 	}
 
@@ -323,7 +325,7 @@ function mvpd() {
 	}
 
 	$("#mvpd_i").fadeOut(400, function () {
-		$(this).html("<span class='d2'>" + d + ". " + menIn[m - 1] + "</span> savu vārda dienu svin <span class='v'>"  + (v[d_sk[m - 1] + d]).replace(/(?!^)[A-Z]/g, ", $&") + "</span>.").fadeIn(800, nof());
+		$(this).html("<span class='d2'>" + d + ". " + menIn[m - 1] + "</span> savu vārda dienu svin <span class='v'>"  + (v[d_sk[m - 1] + d]).replace(/(?!^)[A-ZĀČĒĢĪĶĻŅŠŪŽ]/g, ", $&") + "</span>.").fadeIn(800, nof());
 	});
 }
 
