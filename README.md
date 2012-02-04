@@ -15,7 +15,9 @@ Pazīstamāko pārlūkprogrammu atbalsts:
 - Firefox Desktop 4+;
 - Opera Desktop 10+;
 - Internet Explorer 7+;
-- Opera Mobile 11.0+.
+- Opera Mobile 11.0+;
+- UC Browser;
+- Opera Mini 5.0+.
 
 ## Lietošanas noteikumi ##
 > **Vārddienis WEB** ir un būs bezmaksas projekts, kura attīstību veicinās gan Jūsu sniegtie ziedojumi, gan izteiktie komentāri, viedokļi un ierosinājumi, gan mana paša vēlme to pilnveidot un uzlabot, un izmainīt.
@@ -31,9 +33,9 @@ Pazīstamāko pārlūkprogrammu atbalsts:
 Projekta veidošanā izmantotās programmas un servisi:
 
 - [GitHub](https://github.com/)
-- [RJ TextEd](http://rj-texted.se/) (7.81)
+- [RJ TextEd](http://rj-texted.se/) (7.90)
 - [Programmer's Notepad](http://www.pnotepad.org/) (2.3.4)
-- [Git](http://git-scm.com/) (1.7.8.2)
+- [Git](http://git-scm.com/) (1.7.9)
 - [MarkdownPad](http://markdownpad.com) (1.1.4.0)
 - [Easy Feed Editor](http://sourceforge.net/projects/easyfeededitor/) (3.5.2.0)
 - [Dropbox](http://dropbox.com) (1.2.49)
@@ -45,7 +47,7 @@ Projekta veidošanā izmantotās programmas un servisi:
 
 Iekļautie projekti, resursi:
 
-- [jQueryMobile](http://jquerymobile.com) (1.0)
+- [jQueryMobile](http://jquerymobile.com) (1.0.1)
 - [jQuery](http://jquery.com) (1.6.4)
 - [Glossify noformējums](http://www.mobjectify.com/resources/Glossify_theme_for_jquery_mobile/)
 - [GitHub Ribbon (josla)](https://github.com/blog/273-github-ribbons)
