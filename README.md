@@ -47,7 +47,7 @@ Projekta veidošanā izmantotās programmas un servisi:
 
 Iekļautie projekti, resursi:
 
-- [jQueryMobile](http://jquerymobile.com) (1.0.1)
-- [jQuery](http://jquery.com) (1.6.4)
+- [jQueryMobile](http://jquerymobile.com) (1.1.0 RC1)
+- [jQuery](http://jquery.com) (1.7.1)
 - [Glossify noformējums](http://www.mobjectify.com/resources/Glossify_theme_for_jquery_mobile/)
 - [GitHub Ribbon (josla)](https://github.com/blog/273-github-ribbons)
