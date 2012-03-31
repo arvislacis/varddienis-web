@@ -1,7 +1,7 @@
 ﻿// Copyrights © 2010-2012 Arvis Lācis
 // arvis.lacis@inbox.lv | http://twitter.com/arvislacis | http://varddienis.blogspot.com
 /*jslint white: true, evil: true, plusplus: true, sloppy: true, indent: 4, maxerr: 50 */
-/*global $: false, setTimeout: false, webkitNotifications: false */
+/*global $: false, setTimeout: false, webkitNotifications: false, window: false */
 
 // Datu masīvi
 var ned_d = ["Svētdiena", "Pirmdiena", "Otrdiena", "Trešdiena", "Ceturtdiena", "Piektdiena", "Sestdiena"],
@@ -275,15 +275,17 @@ function sodiena() {
 
 // Paziņojuma fn (Google Chrome paplašinājumam)
 function zina() {
-	var d = new Date(),
-		zina = webkitNotifications.createNotification(
-			'',
-			v[d_sk[d.getMonth()] + d.getDate()].replace(/(?!^)[A-ZĀČĒĢĪĶĻŅŠŪŽ]/g, ", $&"),
-			$(".datums").html()
-		);
+	if (window.webkitNotifications && window.webkitNotifications.checkPermission() === 0) {
+		var d = new Date(),
+			zina = window.webkitNotifications.createNotification(
+				'',
+				v[d_sk[d.getMonth()] + d.getDate()].replace(/(?!^)[A-ZĀČĒĢĪĶĻŅŠŪŽ]/g, ", $&"),
+				$(".datums").html()
+			);
 
-	zina.show();
-	setTimeout(function() {zina.cancel()}, 5000);
+		zina.show();
+		setTimeout(function() {zina.cancel()}, 5000);
+	}
 }
 
 // MDPV fn
