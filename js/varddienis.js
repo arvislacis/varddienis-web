@@ -97,7 +97,7 @@ function nof() {
 
 	$(".datums").css({"text-align" : "left"});
 	$(".laiks").css({"text-align" : "right"});
-	$(".v_d, .d_info, .svetki, .tikli, #mdpv, #mdpv_i, #mvpd_i").css({"text-align" : "center"});
+	$(".v_d, .d_info, .svetki, #mdpv, #mdpv_i, #mvpd_i").css({"text-align" : "center"});
 
 	$(".d2").css({"font-weight" : "bold"});
 }
