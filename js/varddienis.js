@@ -1,7 +1,7 @@
 ﻿// Copyrights © 2010-2012 Arvis Lācis
 // arvis.lacis@inbox.lv | http://twitter.com/arvislacis | http://varddienis.blogspot.com
 /*jslint white: true, evil: true, plusplus: true, sloppy: true, indent: 4, maxerr: 50 */
-/*global $: false, setTimeout: false */
+/*global $: false, setTimeout: false, webkitNotifications: false */
 
 // Datu masīvi
 var ned_d = ["Svētdiena", "Pirmdiena", "Otrdiena", "Trešdiena", "Ceturtdiena", "Piektdiena", "Sestdiena"],
@@ -115,9 +115,7 @@ function sodiena() {
 		sek = d.getSeconds(),
 		snr = d_sk[men] + die,
 		sod = v[d_sk[men] + die].replace(/(?!^)[A-ZĀČĒĢĪĶĻŅŠŪŽ]/g, ", $&"),
-		sods = sod.replace(/[A-ZĀČĒĢĪĶĻŅŠŪŽ][a-zāčēģīķļņšūž]*/g, "<a href='http://personvardi.lv/skaidrojumi/$&/'>$&</a>"),
 		rit = v[d_sk[men] + die + 1].replace(/(?!^)[A-ZĀČĒĢĪĶĻŅŠŪŽ]/g, ", $&"),
-		rits = rit.replace(/[A-ZĀČĒĢĪĶĻŅŠŪŽ][a-zāčēģīķļņšūž]*/g, "<a href='http://personvardi.lv/skaidrojumi/$&/'>$&</a>"),
 		die_g,
 		atl_d,
 		gal1 = "šas",
@@ -156,12 +154,12 @@ function sodiena() {
 
 	// Vārda dienu izvadīšana
 	if (gada_i === 0 && men === 1 && die === 28) {
-		$(".v_d").html("Šodien vārda dienu svin <span class='v'>" + sods + ".</span><br />Rīt vārda dienu neviens nesvinēs.");
+		$(".v_d").html("Šodien vārda dienu svin <span class='v'>" + sod + ".</span><br />Rīt vārda dienu neviens nesvinēs.");
 	} else {
 		if (gada_i === 0 && men === 1 && die === 29) {
-			$(".v_d").html("Šodien vārda dienu neviens nesvin.<br/>Rīt vārda dienu svinēs <span class='v'>" + sods + ".</span>");
+			$(".v_d").html("Šodien vārda dienu neviens nesvin.<br/>Rīt vārda dienu svinēs <span class='v'>" + sod + ".</span>");
 		} else {
-			$(".v_d").html("Šodien vārda dienu svin <span class='v'>" + sods + ".</span><br />Rīt vārda dienu svinēs <span class='v'>" + rits + ".</span>");
+			$(".v_d").html("Šodien vārda dienu svin <span class='v'>" + sod + ".</span><br />Rīt vārda dienu svinēs <span class='v'>" + rit + ".</span>");
 		}
 	}
 
@@ -275,6 +273,19 @@ function sodiena() {
 	setTimeout(sodiena, 1000);
 }
 
+// Paziņojuma fn (Google Chrome paplašinājumam)
+function zina() {
+	var d = new Date(),
+		zina = webkitNotifications.createNotification(
+			'',
+			v[d_sk[d.getMonth()] + d.getDate()].replace(/(?!^)[A-ZĀČĒĢĪĶĻŅŠŪŽ]/g, ", $&"),
+			$(".datums").html()
+		);
+
+	zina.show();
+	setTimeout(function() {zina.cancel()}, 5000);
+}
+
 // MDPV fn
 function mdpv() {
 	var pv, pvm, pvp, i, i2, m, r;
@@ -333,6 +344,7 @@ function mvpd() {
 $(function () {
 	sodiena();
 	nof();
+	zina();
 
 	$("a").click(function () {
 		$(this).fadeTo("slow", 0.5).fadeTo("def", 1);
