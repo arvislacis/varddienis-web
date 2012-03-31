@@ -1,6 +1,6 @@
 ﻿{
 	"name": "Vārddienis WEB",
-	"version": "1.4.9",
+	"version": "1.4.8",
 	"manifest_version": 2,
 
 	"description": "Apskatiet šodienas un rītdienas vārda dienu gaviļniekus",
@@ -19,5 +19,6 @@
 	],
 
 	"homepage_url": "http://varddiens.blogspot.com",
-	"offline_enabled": true
+	"offline_enabled": true,
+	 "update_url": "https://raw.github.com/arvislacis/varddienis_web/master/update.xml"
 }
