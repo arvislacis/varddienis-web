@@ -1,0 +1,19 @@
+﻿{
+  "name": "Vārddienis WEB",
+  "version": "1.4.9",
+  "manifest_version": 2,
+  
+  "description": "Apskatiet šodienas un rītdienas vārda dienu gaviļniekus",
+  "app": {
+    "launch": {
+      "local_path": "index.html"
+    }
+  },
+  
+  "permissions": [
+    "notifications"
+  ],
+  
+  "homepage_url": "http://varddiens.blogspot.com",
+  "offline_enabled": true
+}
