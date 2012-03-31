@@ -1,0 +1,24 @@
+﻿{
+	"name": "Vārddienis WEB",
+	"version": "1.4.9",
+	"manifest_version": 2,
+
+	"description": "Apskatiet šodienas un rītdienas vārda dienu gaviļniekus",
+	"icons": {
+		"16": "img/ikona16.png",
+		"48": "img/ikona48.png",
+		"128": "img/ikona128.png" },
+	"app": {
+		"launch": {
+			"local_path": "index.html"
+		}
+	},
+
+	"permissions": [
+		"notifications"
+	],
+
+	"homepage_url": "http://varddiens.blogspot.com",
+	"offline_enabled": true,
+	 "update_url": "https://raw.github.com/arvislacis/varddienis_web/master/update.xml"
+}

@@ -1,4 +1,3 @@
-
 # Vārddienis WEB #
 
 ## Kas ir Vārddienis WEB? ##
@@ -32,22 +31,19 @@ Lūgums Jūsu izstrādājumā, ja tādu izveidosiet, tomēr ietvert kādas norā
 ## Izmantotie resursi (atsauces) ##
 Projekta veidošanā izmantotās programmas un servisi:
 
-- [RJ TextEd](http://rj-texted.se/) (7.90)
-- [Programmer's Notepad](http://www.pnotepad.org/) (2.3.4)
 - [GitHub](https://github.com/)
 - [Git](http://git-scm.com/) (1.7.9)
-- [MarkdownPad](http://markdownpad.com) (1.1.4.0)
-- [Easy Feed Editor](http://sourceforge.net/projects/easyfeededitor/) (3.5.2.0)
-- [Dropbox](http://dropbox.com) (1.2.51)
+- [Notepad++](http://notepad-plus-plus.org/) (6.0)
+- [Programmer's Notepad](http://www.pnotepad.org/) (2.3.4)
+- [MarkdownPad](http://markdownpad.com) (1.1.6.0)
+- [MarkPad](http://code52.org/DownmarkerWPF/) (0.9.0.0)
 - [RegExr](http://www.gskinner.com/RegExr/) (0.3.1b)
 - [JavaScript Compressor](http://www.minifyjavascript.com/)
-- [Notepad++](http://notepad-plus-plus.org/) (5.9.8)
-- [Opera](http://www.opera.com) (11.61)
-- [PSPad](http://www.pspad.com/en/) (4.5.6)
+- [Opera](http://www.opera.com) (11.62)
 
 Iekļautie projekti, resursi:
 
-- [jQueryMobile](http://jquerymobile.com) (1.0.1)
-- [jQuery](http://jquery.com) (1.6.4)
+- [jQueryMobile](http://jquerymobile.com) (1.1.0 RC1)
+- [jQuery](http://jquery.com) (1.7.1)
 - [Glossify noformējums](http://www.mobjectify.com/resources/Glossify_theme_for_jquery_mobile/)
 - [GitHub Ribbon (josla)](https://github.com/blog/273-github-ribbons)
