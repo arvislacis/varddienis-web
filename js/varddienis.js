@@ -1,7 +1,7 @@
 ﻿// Copyrights © 2010-2012 Arvis Lācis
 // arvis.lacis@inbox.lv | http://twitter.com/arvislacis | http://varddienis.blogspot.com
 /*jslint white: true, evil: true, plusplus: true, sloppy: true, indent: 4, maxerr: 50 */
-/*global $: false, setTimeout: false, webkitNotifications: false, window: false */
+/*global $: false, setTimeout: false, webkitNotifications: false, window: false, zina: false */
 
 // Datu masīvi
 var ned_d = ["Svētdiena", "Pirmdiena", "Otrdiena", "Trešdiena", "Ceturtdiena", "Piektdiena", "Sestdiena"],
@@ -87,7 +87,8 @@ var ned_d = ["Svētdiena", "Pirmdiena", "Otrdiena", "Trešdiena", "Ceturtdiena",
 		273 : "Starptautiskā veco ļaužu diena",
 		303 : "Helovīni",
 		314 : "Lāčplēša diena",
-		322 : "Starptaustiskā vīriešu diena"};
+		322 : "Starptaustiskā vīriešu diena"},
+		taimeris = 0;
 
 // Noformējuma fn
 function nof() {
@@ -270,6 +271,14 @@ function sodiena() {
 	$(".svetki").html("<span class='sv'>" + sve + "</span><span class='at'>" + atz + "</span>");
 
 	nof();
+	
+	if (taimeris < 900) {
+		taimeris = taimeris + 1;
+	} else {
+		taimeris = 0;
+		zina();
+	}
+	
 	setTimeout(sodiena, 1000);
 }
 
@@ -284,7 +293,7 @@ function zina() {
 			);
 
 		zina.show();
-		setTimeout(function() {zina.cancel()}, 5000);
+		setTimeout(function() {zina.cancel()}, 7500);
 	}
 }
 
@@ -346,7 +355,6 @@ function mvpd() {
 $(function () {
 	sodiena();
 	nof();
-	zina();
 
 	$("a").click(function () {
 		$(this).fadeTo("slow", 0.5).fadeTo("def", 1);

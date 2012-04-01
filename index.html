@@ -14,12 +14,12 @@
 <body>
 	<div data-role="page" data-title="Vārddienis WEB" data-theme="e" id="galvenais">
 		<div data-role="header" data-theme="a">
-			<h1>Vārddienis WEB v1.4.9</h1>
+			<h1>Vārddienis WEB v1.5.0</h1>
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#galvenais" data-icon="home" class="ui-btn-active" data-transition="flip">Sākums</a></li>
 					<li><a href="#meklet" data-icon="search" data-transition="flip">Meklēt</a></li>
-					<li><a href="#atbalsts" data-icon="check" data-rel="dialog" data-transition="slide">Atbalstīt</a></li>
+					<li><a href="#ziedot" data-icon="check" data-rel="dialog" data-transition="slide">Ziedot attīstībai</a></li>
 					<li><a href="https://github.com/arvislacis/varddienis_web" data-icon="info" title="Pēc atvēršanas skatīt README.md failu">Palīdzība</a></li>
 				</ul>
 			</div>
@@ -45,7 +45,7 @@
 			<h3><div class="svetki"></div></h3>
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="a">
-			<h4><a href="#par" data-role="button" data-icon="info" data-rel="dialog" data-transition="slideup">© 2010-2012 Arvis Lācis</a></h4>
+			<h4><a href="#par" data-role="button" data-icon="info" data-rel="dialog" data-transition="slideup">© 2010-2012 Arvis Lācis (@arvislacis)</a></h4>
 		</div>
 	</div>
 	<div data-role="page" data-title="Vārddienis WEB - Meklēt" data-theme="e" id="meklet">
@@ -55,7 +55,7 @@
 				<ul>
 					<li><a href="#galvenais" data-icon="home" data-transition="flip">Sākums</a></li>
 					<li><a href="#meklet" data-icon="search" class="ui-btn-active" data-transition="flip">Meklēt</a></li>
-					<li><a href="#atbalsts" data-icon="check" data-rel="dialog" data-transition="slide">Atbalstīt</a></li>
+					<li><a href="#ziedot" data-icon="check" data-rel="dialog" data-transition="slide">Ziedot attīstībai</a></li>
 					<li><a href="https://github.com/arvislacis/varddienis_web" data-icon="info" title="Pēc atvēršanas skatīt README.md failu">Palīdzība</a></li>
 				</ul>
 			</div>
@@ -105,22 +105,36 @@
 			</div>
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="a">
-			<h4><a href="#par" data-role="button" data-icon="info" data-rel="dialog" data-transition="slideup">© 2010-2012 Arvis Lācis</a></h4>
+			<h4><a href="#par" data-role="button" data-icon="info" data-rel="dialog" data-transition="slideup">© 2010-2012 Arvis Lācis (@arvislacis)</a></h4>
 		</div>
 	</div>
-	<div data-role="page" data-title="Vārddienis WEB - Atbalstīt" data-theme="e" id="atbalsts">
+	<div data-role="page" data-title="Vārddienis WEB - Ziedot attīstībai" data-theme="e" id="ziedot">
 		<div data-role="header" data-theme="a">
-			<h1>Atbalstīt</h1>
+			<h1>Ziedot attīstībai</h1>
 		</div>
 		<div data-role="content">
-			<strong>Vārddieņa</strong> un <strong>Vārddieņa WEB</strong> projektu var brīvprātīgi atbalstīt <em>Zelta Zivtiņas (ZZ)</em> un <em>Tele2</em> lietotāji,
-			veicot ziedojuma pārskaitījumus ar mobilā telefona palīdzību uz numuru (+371) <strong>20308966</strong>.
-			<h3>Papildu informācija:</h3>
-			<div data-role="controlgroup" data-type="horizontal">
-				<a href="http://www.zeltazivtina.lv/lv/uzpildies/papildini-no-citas-zz/papildini-ar-taustinu-kombinaciju" target="_window" data-role="button" data-icon="star" data-theme="f">Zelta Zivtiņas lietotājiem</a>
-				<a href="http://www.zeltazivtina.lv/lv/uzpildies/papildini-savu-zz-no-tele2-rekina/vienreizejs-maksajums" target="_window" data-role="button" data-icon="star" data-theme="b">Tele2 lietotājiem</a>
+			<strong>Vārddieņa WEB</strong> projektu brīvprātīgi var atbalstīt ikviens interesents, kādā no sekojošajiem veidiem:
+			<div data-role="collapsible" data-theme="g" data-content-theme="g">
+				<h3>Bankas pārskaitījums</h3>
+				Veiciet pārskaitījumu uz kontu <strong>LV11UNLA0050014734080</strong> <em>(A/S SEB banka)</em>.
 			</div>
-			Paldies visiem ziedotājiem!
+			<div data-role="collapsible" data-theme="f" data-content-theme="f">
+				<h3>Mobilly pārskaitījums</h3>
+				Sūtiet SMS ar tekstu <strong>SEND X.XX ALVD</strong> uz numuru <strong>1859</strong>, kur X.XX ir ziedojuma summa, piemēram, 0.50, kas atbilst 0,50 Ls.
+				Papildu informācija <a href="http://mobilly.lv/" target="_window">mobilly.lv</a>.
+			</div>
+			<div data-role="collapsible" data-theme="e" data-content-theme="e">
+				<h3>Zelta Zivtiņas priekšapmaksas kartes papildināšana</h3>
+				Sekojiet norādījumiem <a href="http://www.zeltazivtina.lv/lv/uzpildies" target="_window">ZZ mājas lapā</a>.
+				Telefona numurs: <strong>20308966</strong>.
+			</div>
+			<div data-role="collapsible" data-theme="d" data-content-theme="d">
+				<h3>Zelta Zivtiņas kredīta pārskaitījums</h3>
+				Izmantojiet taustiņu kombināciju <strong>*120#</strong> un sekojiet norādītajām instrukcijām.
+				Telefona numurs: <strong>20308966</strong>.
+			</div>
+			<hr>
+			Paldies visiem ziedotājiem un atbalstītājiem!
 		</div>
 	</div>
 	<div data-role="page" data-title="Vārddienis WEB - Par..." data-theme="e" id="par">
@@ -128,20 +142,14 @@
 			<h1>Par...</h1>
 		</div>
 		<div data-role="content">
-			<h3>Vārddienis WEB v1.4.9</h3>
-			<h5>Atjaunināts: <em>2012. gada 31. martā</em>.
+			<h3>Vārddienis WEB v1.5.0</h3>
+			<h5>Atjaunināts: <em>2012. gada 1. aprīlī</em>.
 			<br>
-			Copyrights © 2010-2012 Arvis Lācis
+			Copyrights © 2010-2012 Arvis Lācis (@arvislacis)
 			<br></h5>
-			<div data-role="controlgroup" data-type="horizontal">
-				<a href="mailto:arvis.lacis@inbox.lv?subject=V%C4%81rddienis%20WEB" target="_window" data-role="button" data-icon="arrow-r" data-theme="b">E-pasts</a>
-				<a href="http://twitter.com/arvislacis" target="_window" data-role="button" data-icon="star">Twitter</a>
-				<a href="http://varddienis.blogspot.com" target="_window" data-role="button" data-icon="grid">Emuārs</a>
-			</div>
-			<div data-role="controlgroup" data-type="horizontal">
-				<a href="https://github.com/arvislacis/varddienis_web" target="_window" data-role="button" data-icon="arrow-r">Projekta pirmkods</a>
-				<a href="https://teambox.com/public/varddienis" target="_window" data-role="button" data-icon="refresh">Teambox projekts</a>
-			</div>
+			<a href="mailto:arvis.lacis@inbox.lv?subject=V%C4%81rddienis%20WEB" target="_window" data-role="button" data-icon="arrow-r" data-theme="b">E-pasts</a>
+			<a href="https://github.com/arvislacis/varddienis_web" target="_window" data-role="button" data-icon="grid" data-theme="g">Projekta pirmkods</a>
+			<a href="http://varddienis.blogspot.com" target="_window" data-role="button" data-icon="check" data-theme="f">Emuārs</a>
 			<h6>Izveidots ar <a href="http://notepad-plus-plus.org" target="_window">Notepad++</a>.
 			Powered by <a href="http://jquery.com" target="_window">jQuery</a>
 			and <a href="http://jquerymobile.com" target="_window">jQueryMobile</a>.</h6>
