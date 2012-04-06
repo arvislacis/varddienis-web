@@ -1,7 +1,7 @@
 ﻿// Copyrights © 2010-2012 Arvis Lācis
 // arvis.lacis@inbox.lv | http://twitter.com/arvislacis | http://varddienis.blogspot.com
 /*jslint white: true, evil: true, plusplus: true, sloppy: true, indent: 4, maxerr: 50 */
-/*global $: false, setTimeout: false, webkitNotifications: false, window: false, zina: false */
+/*global $: false, localStorage: false, setTimeout: false, webkitNotifications: false, window: false, zina: false */
 
 // Datu masīvi
 var ned_d = ["Svētdiena", "Pirmdiena", "Otrdiena", "Trešdiena", "Ceturtdiena", "Piektdiena", "Sestdiena"],
@@ -88,9 +88,22 @@ var ned_d = ["Svētdiena", "Pirmdiena", "Otrdiena", "Trešdiena", "Ceturtdiena",
 		303 : "Helovīni",
 		314 : "Lāčplēša diena",
 		322 : "Starptaustiskā vīriešu diena"},
-		taimeris = 0;
+		taimeris = 0,
+		crx = false,
+		laiks;
 
-// Noformējuma fn
+// Google Chrome paplašinājuma pārbaude
+if (window.webkitNotifications && window.webkitNotifications.checkPermission() === 0) {
+	crx = true;
+	
+	laiks = localStorage["laiks"];
+	if (laiks === undefined) {
+		localStorage["laiks"] = 900;
+		laiks = 900;
+	}
+}
+
+// Noformējuma un efektu fn
 function nof() {
 	$(".v").css({"color" : "blue", "font-weight" : "bold"});
 	$(".sv").css({"color" : "darkred"});
@@ -101,6 +114,12 @@ function nof() {
 	$(".v_d, .info, .d_info, .svetki, #mdpv, #mdpv_i, #mvpd_i").css({"text-align" : "center"});
 
 	$(".d2").css({"font-weight" : "bold"});
+	
+	$("a[href*='://']").attr({"target" : "_window"});
+	
+	if (crx) {
+		$("#iest").attr({"href" : "#opcijas", "title" : ""});
+	}
 }
 
 // Šodienas fn
@@ -272,7 +291,7 @@ function sodiena() {
 
 	nof();
 
-	if (taimeris < 900) {
+	if (taimeris < laiks) {
 		taimeris = taimeris + 1;
 	} else {
 		taimeris = 0;
@@ -284,7 +303,7 @@ function sodiena() {
 
 // Paziņojuma fn (Google Chrome paplašinājumam)
 function zina(teksts) {
-	if (window.webkitNotifications && window.webkitNotifications.checkPermission() === 0) {
+	if (crx) {
 		var d = new Date(),
 			zina = window.webkitNotifications.createNotification(
 				'',
@@ -381,5 +400,10 @@ $(function () {
 
 	$("#mvpdp").click(function () {
 		mvpd();
+	});
+	
+	$("#saglabat").click(function (){
+		localStorage["laiks"] = $("#laiks").val();
+		laiks = $("#laiks").val();
 	});
 });

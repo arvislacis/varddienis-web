@@ -14,6 +14,7 @@
 <body>
 	<div data-role="page" data-title="Vārddienis WEB" data-theme="e" id="galvenais">
 		<div data-role="header" data-theme="a">
+			<a href="#" data-role="button" data-inline="true" data-icon="gear" data-rel="dialog" data-transition="slide" title="Darbojas tikai Google Chrome paplašinājumā" id="iest">Iestatījumi</a>
 			<h1>Vārddienis WEB v1.5.1</h1>
 			<div data-role="navbar">
 				<ul>
@@ -25,7 +26,7 @@
 			</div>
 		</div>
 		<div data-role="content">
-			<a href="https://github.com/arvislacis/varddienis_web" target="_window"><img style="position: absolute; top: 0; right: 0; border: 0;" src="img/github.png" alt="Vārddienis WEB - GitHub"></a>
+			<a href="https://github.com/arvislacis/varddienis_web"><img style="position: absolute; top: 0; right: 0; border: 0;" src="img/github.png" alt="Vārddienis WEB - GitHub"></a>
 			<div class="ui-grid-b">
 				<div class="ui-block-a">
 					<h3><div class="datums"></div></h3>
@@ -53,6 +54,7 @@
 	</div>
 	<div data-role="page" data-title="Vārddienis WEB - Meklēt" data-theme="e" id="meklet">
 		<div data-role="header" data-theme="a">
+			<a href="#" data-role="button" data-inline="true" data-icon="gear" data-rel="dialog" data-transition="slide" title="Darbojas tikai Google Chrome paplašinājumā" id="iest">Iestatījumi</a>
 			<h1>Meklēšana</h1>
 			<div data-role="navbar">
 				<ul>
@@ -64,7 +66,7 @@
 			</div>
 		</div>
 		<div data-role="content">
-			<a href="https://github.com/arvislacis/varddienis_web" target="_window"><img style="position: absolute; top: 0; right: 0; border: 0;" src="img/github.png" alt="Vārddienis WEB - GitHub"></a>
+			<a href="https://github.com/arvislacis/varddienis_web"><img style="position: absolute; top: 0; right: 0; border: 0;" src="img/github.png" alt="Vārddienis WEB - GitHub"></a>
 			<div class="ui-grid-b">
 				<div class="ui-block-a">
 					<h3><div class="datums"></div></h3>
@@ -85,7 +87,7 @@
 						</div>
 					</div>
 					<div class="ui-block-b">
-						<a href="#" id="mdpvp" data-role="button" data-icon="search" data-theme="g">Atrast datumu</a>
+						<a href="#" data-role="button" data-icon="search" data-theme="g" id="mdpvp">Atrast datumu</a>
 					</div>
 				</div>
 				<div id="mdpv_i">&nbsp;</div>
@@ -95,16 +97,16 @@
 				<div class="ui-grid-b">
 					<div class="ui-block-a">
 						<div data-role="fieldcontain"><label for="mvpd">Izvēlieties dienu:</label>
-							<input type="range" min="1" max="31" id="mvpd" data-highlight="true" />
+							<input type="range" min="1" max="31" data-highlight="true" id="mvpd" />
 						</div>
 					</div>
 					<div class="ui-block-b">
 						<div data-role="fieldcontain"><label for="mvpm">Izvēlieties mēnesi:</label>
-							<input type="range" min="1" max="12" id="mvpm" data-highlight="true" />
+							<input type="range" min="1" max="12" data-highlight="true" id="mvpm" />
 						</div>
 					</div>
 					<div class="ui-block-c">
-						<a href="#" id="mvpdp" data-role="button" data-icon="search" data-theme="g">Atrast vārdus</a>
+						<a href="#" data-role="button" data-icon="search" data-theme="g" id="mvpdp">Atrast vārdus</a>
 					</div>
 				</div>
 				<div id="mvpd_i">&nbsp;</div>
@@ -127,11 +129,11 @@
 			<div data-role="collapsible" data-theme="f" data-content-theme="f">
 				<h3>Mobilly pārskaitījums</h3>
 				Sūtiet SMS ar tekstu <strong>SEND X.XX ALVD</strong> uz numuru <strong>1859</strong>, kur X.XX ir ziedojuma summa, piemēram, 0.50, kas atbilst 0,50 Ls.
-				Papildu informācija <a href="http://mobilly.lv/" target="_window">mobilly.lv</a>.
+				Papildu informācija <a href="http://mobilly.lv/">mobilly.lv</a>.
 			</div>
 			<div data-role="collapsible" data-theme="e" data-content-theme="e">
 				<h3>Zelta Zivtiņas priekšapmaksas kartes papildināšana</h3>
-				Sekojiet norādījumiem <a href="http://www.zeltazivtina.lv/lv/uzpildies" target="_window">ZZ mājas lapā</a>.
+				Sekojiet norādījumiem <a href="http://www.zeltazivtina.lv/lv/uzpildies">ZZ mājas lapā</a>.
 				Telefona numurs: <strong>20308966</strong>.
 			</div>
 			<div data-role="collapsible" data-theme="d" data-content-theme="d">
@@ -147,6 +149,24 @@
 			Paldies visiem ziedotājiem un atbalstītājiem!
 		</div>
 	</div>
+	<div data-role="page" data-title="Vārddienis WEB - Iestatījumi..." data-theme="e" id="opcijas">
+		<div data-role="header" data-theme="a">
+			<h1>Iestatījumi...</h1>
+		</div>
+		<div data-role="content">
+			<label for="laiks" class="select">Paziņojuma parādīšanas biežums, reizi:</label>
+			<select data-mini="true" id="laiks">
+				<option value="60">1 minūtē</option>
+				<option value="300">5 minūtēs</option>
+				<option value="900">15 minūtēs</option>
+				<option value="1800">30 minūtēs</option>
+				<option value="3600">1 stundā</option></option>
+				<option value="7200">2 stundās</option>
+				<option value="10800">3 stundās</option>
+			</select>
+				<a href="#" data-role="button" data-icon="check" data-theme="b" data-mini="true" id="saglabat">Saglabāt iestatījumus</a>
+		</div>
+	</div>
 	<div data-role="page" data-title="Vārddienis WEB - Par..." data-theme="e" id="par">
 		<div data-role="header" data-theme="a">
 			<h1>Par...</h1>
@@ -157,12 +177,12 @@
 			<br>
 			Copyrights © 2010-2012 Arvis Lācis (@arvislacis)
 			<br></h5>
-			<a href="mailto:arvis.lacis@inbox.lv?subject=V%C4%81rddienis%20WEB" target="_window" data-role="button" data-icon="arrow-r" data-theme="b">E-pasts</a>
-			<a href="https://github.com/arvislacis/varddienis_web" target="_window" data-role="button" data-icon="grid" data-theme="g">Projekta pirmkods</a>
-			<a href="http://varddienis.blogspot.com" target="_window" data-role="button" data-icon="check" data-theme="f">Emuārs</a>
-			<h6>Izveidots ar <a href="http://notepad-plus-plus.org" target="_window">Notepad++</a>.
-			Powered by <a href="http://jquery.com" target="_window">jQuery</a>
-			and <a href="http://jquerymobile.com" target="_window">jQueryMobile</a>.</h6>
+			<a href="mailto:arvis.lacis@inbox.lv?subject=V%C4%81rddienis%20WEB" data-role="button" data-icon="arrow-r" data-theme="b">E-pasts</a>
+			<a href="https://github.com/arvislacis/varddienis_web" data-role="button" data-icon="grid" data-theme="g">Projekta pirmkods</a>
+			<a href="http://varddienis.blogspot.com" data-role="button" data-icon="check" data-theme="f">Emuārs</a>
+			<h6>Izveidots ar <a href="http://notepad-plus-plus.org">Notepad++</a>.
+			Powered by <a href="http://jquery.com">jQuery</a>
+			and <a href="http://jquerymobile.com">jQueryMobile</a>.</h6>
 		</div>
 	</div>
 </body>
