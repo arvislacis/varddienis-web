@@ -98,7 +98,7 @@ function nof() {
 
 	$(".datums").css({"text-align" : "left"});
 	$(".laiks").css({"text-align" : "right"});
-	$(".v_d, .d_info, .svetki, #mdpv, #mdpv_i, #mvpd_i").css({"text-align" : "center"});
+	$(".v_d, .info, .d_info, .svetki, #mdpv, #mdpv_i, #mvpd_i").css({"text-align" : "center"});
 
 	$(".d2").css({"font-weight" : "bold"});
 }
@@ -271,24 +271,24 @@ function sodiena() {
 	$(".svetki").html("<span class='sv'>" + sve + "</span><span class='at'>" + atz + "</span>");
 
 	nof();
-	
+
 	if (taimeris < 900) {
 		taimeris = taimeris + 1;
 	} else {
 		taimeris = 0;
-		zina();
+		zina(sod);
 	}
-	
+
 	setTimeout(sodiena, 1000);
 }
 
 // Paziņojuma fn (Google Chrome paplašinājumam)
-function zina() {
+function zina(teksts) {
 	if (window.webkitNotifications && window.webkitNotifications.checkPermission() === 0) {
 		var d = new Date(),
 			zina = window.webkitNotifications.createNotification(
 				'',
-				v[d_sk[d.getMonth()] + d.getDate()].replace(/(?!^)[A-ZĀČĒĢĪĶĻŅŠŪŽ]/g, ", $&"),
+				teksts,
 				$(".datums").html()
 			);
 
@@ -355,6 +355,8 @@ function mvpd() {
 $(function () {
 	sodiena();
 	nof();
+
+	$(".info").html("Vislabākie pārejas efekti Google Chrome pārlūkprogrammā.");
 
 	$("a").click(function () {
 		$(this).fadeTo("slow", 0.5).fadeTo("def", 1);
