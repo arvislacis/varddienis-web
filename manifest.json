@@ -3,7 +3,7 @@
 	"version": "1.5.1",
 	"manifest_version": 2,
 
-	"description": "Šodienas un rītdienas vārda dienu gaviļnieki, meklēšana un citas iespējas",
+	"description": "Šodienas un rītdienas vārda dienu gaviļnieki, meklēšana un citas iespējas.",
 	"icons": {
 		"16": "img/ikona16.png",
 		"48": "img/ikona48.png",
@@ -15,7 +15,10 @@
 	},
 
 	"permissions": [
-		"notifications"
+		"<all_urls>",
+		"unlimitedStorage",
+		"notifications",
+		"tabs"
 	],
 
 	"homepage_url": "http://varddiens.blogspot.com",
