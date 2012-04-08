@@ -291,28 +291,25 @@ function sodiena() {
 
 	nof();
 
-	if (taimeris < laiks) {
+	if ((taimeris - 1) < laiks && taimeris !== 0) {
 		taimeris = taimeris + 1;
 	} else {
-		taimeris = 0;
-		zina(sod);
+		taimeris = 1;
+		zina(sod, $(".datums").html(), 7500);
 	}
 
 	setTimeout(sodiena, 1000);
 }
 
 // Paziņojuma fn (Google Chrome paplašinājumam)
-function zina(teksts) {
+function zina(txt, txt2, tm) {
 	if (crx) {
 		var d = new Date(),
-			zina = window.webkitNotifications.createNotification(
-				'',
-				teksts,
-				$(".datums").html()
-			);
+			zina = window.webkitNotifications.createNotification('', txt, txt2);
 
 		zina.show();
-		setTimeout(function() {zina.cancel()}, 7500);
+		$("body").append("<audio src='./sound/skana.wav' autoplay='true' />");
+		setTimeout(function() {zina.cancel()}, tm);
 	}
 }
 
