@@ -1,7 +1,7 @@
 ﻿// Copyrights © 2010-2012 Arvis Lācis
 // arvis.lacis@inbox.lv | http://twitter.com/arvislacis | http://varddienis.blogspot.com
 /*jslint white: true, evil: true, plusplus: true, sloppy: true, indent: 4, maxerr: 50 */
-/*global $: false, setTimeout: false, webkitNotifications: false, window: false, zina: false */
+/*global $: false, localStorage: false, setInterval: false, setTimeout: false, webkitNotifications: false, window: false, zina: false */
 
 // Datu masīvi
 var ned_d = ["Svētdiena", "Pirmdiena", "Otrdiena", "Trešdiena", "Ceturtdiena", "Piektdiena", "Sestdiena"],
@@ -88,9 +88,22 @@ var ned_d = ["Svētdiena", "Pirmdiena", "Otrdiena", "Trešdiena", "Ceturtdiena",
 		303 : "Helovīni",
 		314 : "Lāčplēša diena",
 		322 : "Starptaustiskā vīriešu diena"},
-		taimeris = 0;
+		taimeris = 0,
+		crx = false,
+		laiks;
 
-// Noformējuma fn
+// Google Chrome paplašinājuma pārbaude
+if (window.webkitNotifications && window.webkitNotifications.checkPermission() === 0) {
+	crx = true;
+
+	laiks = localStorage.laiks;
+	if (laiks === undefined) {
+		localStorage.laiks = 900;
+		laiks = 900;
+	}
+}
+
+// Noformējuma un efektu fn
 function nof() {
 	$(".v").css({"color" : "blue", "font-weight" : "bold"});
 	$(".sv").css({"color" : "darkred"});
@@ -98,9 +111,15 @@ function nof() {
 
 	$(".datums").css({"text-align" : "left"});
 	$(".laiks").css({"text-align" : "right"});
-	$(".v_d, .d_info, .svetki, #mdpv, #mdpv_i, #mvpd_i").css({"text-align" : "center"});
+	$(".v_d, .info, .d_info, .svetki, #mdpv, #mdpv_i, #mvpd_i").css({"text-align" : "center"});
 
 	$(".d2").css({"font-weight" : "bold"});
+
+	$("a[href*='://']").attr({"target" : "_window"});
+
+	if (crx) {
+		$("#iest").attr({"href" : "#opcijas", "title" : ""});
+	}
 }
 
 // Šodienas fn
@@ -271,29 +290,30 @@ function sodiena() {
 	$(".svetki").html("<span class='sv'>" + sve + "</span><span class='at'>" + atz + "</span>");
 
 	nof();
-	
-	if (taimeris < 900) {
+
+	if ((taimeris - 1) < laiks && taimeris !== 0) {
 		taimeris = taimeris + 1;
 	} else {
-		taimeris = 0;
-		zina();
+		taimeris = 1;
+		zina(sod, $(".datums").html(), 7500, true);
 	}
-	
+
 	setTimeout(sodiena, 1000);
 }
 
 // Paziņojuma fn (Google Chrome paplašinājumam)
-function zina() {
-	if (window.webkitNotifications && window.webkitNotifications.checkPermission() === 0) {
+function zina(txt, txt2, tm, mz) {
+	if (crx) {
 		var d = new Date(),
-			zina = window.webkitNotifications.createNotification(
-				'',
-				v[d_sk[d.getMonth()] + d.getDate()].replace(/(?!^)[A-ZĀČĒĢĪĶĻŅŠŪŽ]/g, ", $&"),
-				$(".datums").html()
-			);
+			logs = window.webkitNotifications.createNotification('', txt, txt2);
 
-		zina.show();
-		setTimeout(function() {zina.cancel()}, 7500);
+		logs.show();
+
+		if (mz) {
+			$("body").append("<audio src='./sound/skana.wav' autoplay='true' />");
+		}
+
+		setTimeout(function() {logs.cancel();}, tm);
 	}
 }
 
@@ -356,6 +376,8 @@ $(function () {
 	sodiena();
 	nof();
 
+	$(".info").html("");
+
 	$("a").click(function () {
 		$(this).fadeTo("slow", 0.5).fadeTo("def", 1);
 	});
@@ -379,5 +401,14 @@ $(function () {
 
 	$("#mvpdp").click(function () {
 		mvpd();
+	});
+
+	$("#opcijas").live("pagecreate", function(){
+		$("#laiks").val(localStorage.laiks);
+	});
+
+	$("#saglabat").click(function (){
+		localStorage.laiks = $("#laiks").val();
+		laiks = $("#laiks").val();
 	});
 });
