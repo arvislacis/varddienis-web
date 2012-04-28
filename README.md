@@ -39,9 +39,10 @@ Projekta veidošanā izmantotās programmas un servisi:
 
 - [GitHub](https://github.com/)
 - [Git](http://git-scm.com/) (1.7.9)
-- [Notepad++](http://notepad-plus-plus.org/) (6.0)
+- [TortoiseGit](http://code.google.com/p/tortoisegit/) (1.7.8.0)
+- [Notepad++](http://notepad-plus-plus.org/) (6.1)
 - [JavaScript Compressor](http://www.minifyjavascript.com/)
-- [MarkdownPad](http://markdownpad.com) (1.1.6.0)
+- [MarkdownPad](http://markdownpad.com) (1.1.7.0)
 - [Google Chrome](https://www.google.com/chrome?hl=lv) (18.0.1)
 - [Opera](http://www.opera.com) (11.62)
 - [MarkPad](http://code52.org/DownmarkerWPF/) (0.9.0.0)
