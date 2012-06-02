@@ -1,5 +1,5 @@
 ﻿// Copyrights © 2010-2012 Arvis Lācis
-// arvis.lacis@inbox.lv | http://twitter.com/arvislacis | http://varddienis.blogspot.com
+// arvis.lacis@inbox.lv | http://twitter.com/arvislacis | http://alvd.org
 /*jslint white: true, evil: true, plusplus: true, sloppy: true, indent: 4, maxerr: 50 */
 /*global $: false, localStorage: false, setInterval: false, setTimeout: false, webkitNotifications: false, window: false, zina: false */
 
