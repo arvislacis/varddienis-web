@@ -38,20 +38,18 @@ Kā arī varat veikt dažāda veida nelielus ziedojumus, lai sekmētu šī proje
 Projekta veidošanā izmantotās programmas un servisi:
 
 - [GitHub](https://github.com/)
-- [Git](http://git-scm.com/) (1.7.9)
-- [TortoiseGit](http://code.google.com/p/tortoisegit/) (1.7.8.0)
-- [Notepad++](http://notepad-plus-plus.org/) (6.1)
+- [Git](http://git-scm.com/) (1.7.10.0)
+- [TortoiseGit](http://code.google.com/p/tortoisegit/) (1.7.9.0)
+- [Notepad++](http://notepad-plus-plus.org/) (6.1.2)
 - [JavaScript Compressor](http://www.minifyjavascript.com/)
-- [MarkdownPad](http://markdownpad.com) (1.1.7.0)
+- [MarkdownPad](http://markdownpad.com) (1.3.2.0)
 - [Google Chrome](https://www.google.com/chrome?hl=lv) (18.0.1)
-- [Opera](http://www.opera.com) (11.62)
-- [MarkPad](http://code52.org/DownmarkerWPF/) (0.9.0.0)
+- [Opera](http://www.opera.com) (11.64)
 - [RegExr](http://www.gskinner.com/RegExr/) (0.3.1b)
-- [Programmer's Notepad](http://www.pnotepad.org/) (2.3.4)
 
 Iekļautie projekti, resursi:
 
-- [jQueryMobile](http://jquerymobile.com) (1.1.0 RC2)
+- [jQueryMobile](http://jquerymobile.com) (1.1.0)
 - [jQuery](http://jquery.com) (1.7.1)
 - [Glossify noformējums](http://www.mobjectify.com/resources/Glossify_theme_for_jquery_mobile/)
 - [GitHub Ribbon (josla)](https://github.com/blog/273-github-ribbons)
