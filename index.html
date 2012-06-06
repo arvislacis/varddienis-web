@@ -7,21 +7,26 @@
 <link rel="shortcut icon" href="img/ikona16.png">
 <link rel="stylesheet" href="css/jquery.mobile.structure-1.1.0.min.css">
 <link rel="stylesheet" href="css/jquery.mobile.glossify.theme.css">
+<link rel="stylesheet" href="css/mobiscroll-2.0.custom.min.css">
 <script src="js/jquery-1.7.1.min.js"></script>
 <script src="js/varddienis.min.js"></script>
 <script src="js/jquery.mobile-1.1.0.min.js"></script>
+<script src="js/mobiscroll-2.0.custom.min.js"></script>
+<script type="text/javascript" src="https://gumroad.com/js/gumroad-button.js"></script>
+<script type="text/javascript" src="https://gumroad.com/js/gumroad.js"></script>
 </head>
 <body>
 	<div data-role="page" data-title="Vārddienis WEB" data-theme="e" id="galvenais">
 		<div data-role="header" data-theme="a">
 			<a href="#" data-role="button" data-inline="true" data-icon="gear" data-rel="dialog" data-transition="slide" title="Darbojas tikai Google Chrome paplašinājumā" id="iest">Iestatījumi</a>
-			<h1>Vārddienis WEB v1.5.3</h1>
+			<h1>Vārddienis WEB v1.6.0</h1>
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#galvenais" data-icon="home" class="ui-btn-active" data-transition="flip">Sākums</a></li>
 					<li><a href="#meklet" data-icon="search" data-transition="flip">Meklēt</a></li>
 					<li><a href="#ziedot" data-icon="check" data-rel="dialog" data-transition="slide">Ziedot attīstībai</a></li>
-					<li><a href="https://github.com/arvislacis/varddienis_web" data-icon="info" title="Pēc atvēršanas izlasiet README.md datni">Palīdzība</a></li>
+					<li><a href="#par" data-icon="info"  data-rel="dialog" data-transition="slidedown">Par...</a></li>
+					<li><a href="https://github.com/arvislacis/varddienis_web" data-icon="search" title="Pēc atvēršanas izlasiet README.md datni">Palīdzība</a></li>
 				</ul>
 			</div>
 		</div>
@@ -49,7 +54,7 @@
 			<h3><div class="svetki"></div></h3>
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="a">
-			<h4><a href="#par" data-role="button" data-icon="info" data-rel="dialog" data-transition="slideup">© 2010-2012 Arvis Lācis (@arvislacis)</a></h4>
+			<h4>© 2010-2012 Arvis Lācis <a href="http://gum.co/FlQy" class="gumroad-button">Vārddieņa WEB un citu projektu atbalsts</a></h4>
 		</div>
 	</div>
 	<div data-role="page" data-title="Vārddienis WEB - Meklēt" data-theme="e" id="meklet">
@@ -61,6 +66,7 @@
 					<li><a href="#galvenais" data-icon="home" data-transition="flip">Sākums</a></li>
 					<li><a href="#meklet" data-icon="search" class="ui-btn-active" data-transition="flip">Meklēt</a></li>
 					<li><a href="#ziedot" data-icon="check" data-rel="dialog" data-transition="slide">Ziedot attīstībai</a></li>
+					<li><a href="#par" data-icon="info"  data-rel="dialog" data-transition="slidedown">Par...</a></li>
 					<li><a href="https://github.com/arvislacis/varddienis_web" data-icon="info" title="Pēc atvēršanas skatīt README.md failu">Palīdzība</a></li>
 				</ul>
 			</div>
@@ -83,7 +89,7 @@
 				<div class="ui-grid-a">
 					<div class="ui-block-a">
 						<div data-role="fieldcontain"><label for="mdpv">Ievadiet personvārdu:</label>
-							<input type="text" maxlength="11" id="mdpv" />
+							<input type="text" maxlength="11" id="mdpv">
 						</div>
 					</div>
 					<div class="ui-block-b">
@@ -93,27 +99,22 @@
 				<div id="mdpv_i">&nbsp;</div>
 			</div>
 			<div data-role="collapsible" data-theme="f">
-				<h3 id="msod">Meklēt vārdus pēc datuma</h3>
-				<div class="ui-grid-b">
+				<h3>Meklēt vārdus pēc datuma</h3>
+				<div class="ui-grid-a">
 					<div class="ui-block-a">
-						<div data-role="fieldcontain"><label for="mvpd">Izvēlieties dienu:</label>
-							<input type="range" min="1" max="31" data-highlight="true" id="mvpd" />
+						<div data-role="fieldcontain"><label for="mvpd">Izvēlieties datumu:</label>
+						<input id="mvpd">
 						</div>
 					</div>
 					<div class="ui-block-b">
-						<div data-role="fieldcontain"><label for="mvpm">Izvēlieties mēnesi:</label>
-							<input type="range" min="1" max="12" data-highlight="true" id="mvpm" />
-						</div>
-					</div>
-					<div class="ui-block-c">
 						<a href="#" data-role="button" data-icon="search" data-theme="g" id="mvpdp">Atrast vārdus</a>
+						<div id="mvpd_i"></div>
 					</div>
 				</div>
-				<div id="mvpd_i">&nbsp;</div>
 			</div>
 		</div>
 		<div data-role="footer" data-position="fixed" data-theme="a">
-			<h4><a href="#par" data-role="button" data-icon="info" data-rel="dialog" data-transition="slideup">© 2010-2012 Arvis Lācis (@arvislacis)</a></h4>
+			<h4>© 2010-2012 Arvis Lācis <a href="http://gum.co/FlQy" class="gumroad-button">Vārddieņa WEB un citu projektu atbalsts</a></h4>
 		</div>
 	</div>
 	<div data-role="page" data-title="Vārddienis WEB - Ziedot attīstībai" data-theme="e" id="ziedot">
@@ -135,6 +136,12 @@
 				<h3>Zelta Zivtiņas kredīta pārskaitījums</h3>
 				Izmantojiet taustiņu kombināciju <strong>*120#</strong> un sekojiet norādītajām instrukcijām.
 				Telefona numurs: <strong>20308966</strong>.
+			</div>
+			<div data-role="collapsible" data-theme="d" data-content-theme="d">
+				<h3>Gumroad pārskaitījums</h3>
+				Noklikšķiniet uz zemāk esošās pogas un sekojiet norādītajām instrukcijām.
+				<br>
+				<a href="http://gum.co/FlQy" class="gumroad-button">Vārddieņa WEB un citu projektu atbalsts</a>
 			</div>
 			<hr>
 			Paldies visiem ziedotājiem un atbalstītājiem!
@@ -164,14 +171,14 @@
 			<h1>Par...</h1>
 		</div>
 		<div data-role="content">
-			<h3>Vārddienis WEB v1.5.3</h3>
-			<h5>Atjaunināts: <em>2012. gada 2. jūnijā</em>.
+			<h3>Vārddienis WEB v1.6.0</h3>
+			<h5>Atjaunināts: <em>2012. gada 6. jūnijā</em>.
 			<br>
 			Copyrights © 2010-2012 Arvis Lācis (@arvislacis)
 			<br></h5>
 			<a href="mailto:arvis.lacis@inbox.lv?subject=V%C4%81rddienis%20WEB" data-role="button" data-icon="arrow-r" data-theme="b">E-pasts</a>
 			<a href="https://github.com/arvislacis/varddienis_web" data-role="button" data-icon="grid" data-theme="g">Projekta pirmkods</a>
-			<a href="http://varddienis.blogspot.com" data-role="button" data-icon="check" data-theme="f">Emuārs</a>
+			<a href="http://al.id.lv" data-role="button" data-icon="check" data-theme="f">Emuārs</a>
 			<h6>Izveidots ar <a href="http://notepad-plus-plus.org">Notepad++</a>.
 			Powered by <a href="http://jquery.com">jQuery</a>
 			and <a href="http://jquerymobile.com">jQueryMobile</a>.</h6>

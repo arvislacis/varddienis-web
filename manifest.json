@@ -1,6 +1,6 @@
 ﻿{
 	"name": "Vārddienis WEB",
-	"version": "1.5.2",
+	"version": "1.6.0",
 	"manifest_version": 2,
 
 	"description": "Šodienas un rītdienas vārda dienu gaviļnieki, meklēšana un citas iespējas.",
@@ -21,7 +21,7 @@
 		"tabs"
 	],
 
-	"homepage_url": "http://varddiens.blogspot.com",
+	"homepage_url": "http://al.id.lv",
 	"offline_enabled": true,
 	"update_url": "https://raw.github.com/arvislacis/varddienis_web/master/update.xml"
 }
