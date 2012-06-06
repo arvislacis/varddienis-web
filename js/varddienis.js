@@ -353,21 +353,12 @@ function mdpv() {
 
 // MVPD fn
 function mvpd() {
-	var d, m;
-
-	d = parseInt($("#mvpd").val(), 0);
-	m = parseInt($("#mvpm").val(), 0);
-
-	if ((m === 4 && d === 31) || (m === 6 && d === 31) || (m === 9 && d === 31) || (m === 11 && d === 31)) {
-		$("#mvpd").val(30).slider("refresh");
-		d = 30;
-	} else if (m === 2 && d > 28) {
-		$("#mvpd").val(28).slider("refresh");
-		d = 28;
-	}
+	var mv = $("#mvpd").scroller("getDate"),
+		mvm = mv.getMonth(),
+		mvd = mv.getDate();
 
 	$("#mvpd_i").fadeOut(400, function () {
-		$(this).html("<span class='d2'>" + d + ". " + menIn[m - 1] + "</span> savu vārda dienu svin <span class='v'>"  + (v[d_sk[m - 1] + d]).replace(/(?!^)[A-ZĀČĒĢĪĶĻŅŠŪŽ]/g, ", $&") + "</span>.").fadeIn(800, nof());
+		$(this).html("<span class='d2'>" + mvd + ". " + menIn[mvm] + "</span> savu vārda dienu svin <span class='v'>" + (v[d_sk[mvm] + mvd]).replace(/(?!^)[A-ZĀČĒĢĪĶĻŅŠŪŽ]/g, ", $&") + "</span>.").fadeIn(800, nof());
 	});
 }
 
@@ -377,6 +368,10 @@ $(function () {
 	nof();
 
 	$(".info").html("");
+	$("#mvpd").scroller({preset: "date", dateOrder: "DD, d. MM", dateFormat: "DD, d. MM", width: "250",
+		dayNames: ["Svētdiena", "Pirmdiena", "Otrdiena", "Trešdiena", "Ceturtdiena", "Piektdiena", "Sestdiena"],
+		monthNames: ["janvāris", "februāris", "marts", "aprīlis", "maijs", "jūnijs", "jūlijs", "augusts", "septembris", "oktobris", "novembris", "decembris"],
+		dayText: "Diena", monthText: "Mēnesis",  display: "inline", mode: "mixed", theme: "jqm"});
 
 	$("a").click(function () {
 		$(this).fadeTo("slow", 0.5).fadeTo("def", 1);
@@ -390,13 +385,8 @@ $(function () {
 		mdpv();
 	});
 
-	$("#msod").click(function () {
-		var	d = new Date(),
-			men = d.getMonth() + 1,
-			die = d.getDate();
-
-		$("#mvpd").val(die).slider("refresh");
-		$("#mvpm").val(men).slider("refresh");
+	$("#mvpd").change(function () {
+		mvpd();
 	});
 
 	$("#mvpdp").click(function () {
