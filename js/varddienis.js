@@ -1,6 +1,6 @@
 ﻿// Copyrights © 2010-2012 Arvis Lācis
 // arvis.lacis@inbox.lv | http://twitter.com/arvislacis | http://alvd.org
-/*jslint white: true, evil: true, plusplus: true, sloppy: true, indent: 4, maxerr: 50 */
+/*jslint evil: true, plusplus: true, sloppy: true, indent: 4, maxerr: 50 */
 /*global $: false, localStorage: false, setInterval: false, setTimeout: false, webkitNotifications: false, window: false, zina: false */
 
 // Datu masīvi
@@ -88,9 +88,9 @@ var ned_d = ["Svētdiena", "Pirmdiena", "Otrdiena", "Trešdiena", "Ceturtdiena",
 		303 : "Helovīni",
 		314 : "Lāčplēša diena",
 		322 : "Starptaustiskā vīriešu diena"},
-		taimeris = 0,
-		crx = false,
-		laiks;
+	taimeris = 0,
+	crx = false,
+	laiks;
 
 // Google Chrome paplašinājuma pārbaude
 if (window.webkitNotifications && window.webkitNotifications.checkPermission() === 0) {
@@ -304,16 +304,14 @@ function sodiena() {
 // Paziņojuma fn (Google Chrome paplašinājumam)
 function zina(txt, txt2, tm, mz) {
 	if (crx) {
-		var d = new Date(),
-			logs = window.webkitNotifications.createNotification('', txt, txt2);
-
+		var logs = window.webkitNotifications.createNotification('', txt, txt2);
 		logs.show();
 
 		if (mz) {
 			$("body").append("<audio src='./sound/skana.wav' autoplay='true' />");
 		}
 
-		setTimeout(function() {logs.cancel();}, tm);
+		setTimeout(function () {logs.cancel(); }, tm);
 	}
 }
 
@@ -393,11 +391,11 @@ $(function () {
 		mvpd();
 	});
 
-	$("#opcijas").live("pagecreate", function(){
+	$("#opcijas").live("pagecreate", function () {
 		$("#laiks").val(localStorage.laiks);
 	});
 
-	$("#saglabat").click(function (){
+	$("#saglabat").click(function () {
 		localStorage.laiks = $("#laiks").val();
 		laiks = $("#laiks").val();
 	});
