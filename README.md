@@ -11,11 +11,13 @@ Vārddieņa WEB Google Chrome paplašinājums:
 - **[https://github.com/downloads/arvislacis/varddienis_web/varddienis_web.crx](https://github.com/downloads/arvislacis/varddienis_web/varddienis_web.crx)**.
 
 ## Kas ir Vārddienis WEB? ##
+
 **Vārddienis WEB** ir īpaši veidota saite *(arī [Google Chrome paplašinājums](https://github.com/downloads/arvislacis/varddienis_web/varddienis_web.crx))*, kas pilda ierastās [Vārddieņa programmas](http://dl.dropbox.com/u/25130294/varddienis.zip) un sīkrīka funkcijas. Aplikācija veidota, izmantojot jaunākos HTM5 un JavaScript risinājumus - **jQuery** un **jQueryMobile**, kas to padara daudz pievilcīgāku un ērtāk lietojamu ikvienam interesentam.
 
 Šis projekts tika izveidots, lai ļautu izmantot [Vārddieņa funkcijas](http://dl.dropbox.com/u/25130294/varddienis.zip) arī mobilajās ierīcēs *(Android, Symbian, iPhone, J2ME, ...)*, kā arī Linux un Mac datoros, kam iepriekš šāda iespēja nebija pieejama.
 
 ## Saderīgās ierīces ##
+
 **Vārddieni WEB var izmantot lielākajā daļā ierīču un pārlūkprogrammu** *(datoros, planšetdatoros, mobilajos telefonos u.c.)*, kas atbalsta jaunākos HTML5 un JavaScript standartus. Jāpiebilst, ka daži dizaina elementi un animācijas ierīcēs var tikt attēloti daļēji vai arī var netikt attēloti, tādēļ pilns un apstiprināts saraksts ar atbalstītajām platformām un pārlūkprogrammām apskatāms šeit: [http://jquerymobile.com/gbs](http://jquerymobile.com/gbs).
 
 **Pazīstamāko pārlūkprogrammu atbalsts:**
@@ -30,15 +32,21 @@ Vārddieņa WEB Google Chrome paplašinājums:
 - Opera Mini 5.0+.
 
 ## Kā līdzdarboties šī projekta attīstībā? ##
+
 Reizi pa reizītei kļūdas pieļauj ikviens, tādēļ, ja kādu nepilnību, aplamību izdodas ieraudzīt vai arī ja jums ir kādi ieteikumi, jaunas idejas, tad to visu ir iespējams norādīt šīs lapas *[Issues sadaļā](https://github.com/arvislacis/varddienis_web/issues)*.
 
 Tāpat droši varat lejupielādēt un modificēt šeit pieejamo pirmkodu *(tik tālu, cik tas neaizskar mani un neceļ neslavu šim projektam)*. Ja esat izlabojis kādu nozīmīgu **Vārddieņa WEB** kļūdu vai arī pievienojis jaunu, ļoti noderīgu funkciju, tad droši varat veikt `Pull Request`.
 
-Kā arī varat veikt dažāda veida nelielus ziedojumus, lai sekmētu šī projekta turpmāku attīstību. Informāciju par ziedojumu iespējām varat apskatīt pašā [**Vārddienī WEB**](http://ej.uz/alvd2).
+## Atbalsts ##
+
+Ja esat **[Mobilly](http://www.mobilly.lv)** lietotājs, varat atbalstīt **Vārddieņa WEB** projektu, nosūtot SMS ar tekstu `SEND X.XX LACIS` *(kur X.XX ir ziedojuma summa, piemēram, 0.50, kas atbilst 0,50 Ls)* uz numuru `1859`.
+
+**Liels paldies ikvienam atbalstītājam, Jūsu ziedojumi tiks izmantoti šī un citu projektu attīstībai, izveidei!**
 
 ----------
 
 ## Izmantotie resursi (atsauces) ##
+
 Projekta veidošanā izmantotās programmas un servisi:
 
 - [GitHub](https://github.com/)
