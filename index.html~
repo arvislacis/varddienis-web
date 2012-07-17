@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Vārddienis WEB</title>
 <link rel="shortcut icon" href="img/ikona16.png">
-<link rel="stylesheet" href="css/jquery.mobile.structure-1.1.1.min.css">
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.1.1-rc.1.min.css">
 <link rel="stylesheet" href="css/jquery.mobile.glossify.theme.css">
 <link rel="stylesheet" href="css/mobiscroll-2.0.custom.min.css">
 <script src="js/jquery-1.7.1.min.js"></script>
