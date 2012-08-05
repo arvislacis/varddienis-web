@@ -4,15 +4,10 @@ Vārddieņa WEB vietnes:
 
 - **[http://web.al.id.lv](http://web.al.id.lv)**;
 - **[http://arvislacis.github.com/varddienis_web/](http://arvislacis.github.com/varddienis_web/)**;
-- **[http://ej.uz/alvd2](http://ej.uz/alvd2)**.
-
-Vārddieņa WEB Google Chrome paplašinājums:
-
-- **[https://github.com/downloads/arvislacis/varddienis_web/varddienis_web.crx](https://github.com/downloads/arvislacis/varddienis_web/varddienis_web.crx)**.
 
 ## Kas ir Vārddienis WEB? ##
 
-**Vārddienis WEB** ir īpaši veidota saite *(arī [Google Chrome paplašinājums](https://github.com/downloads/arvislacis/varddienis_web/varddienis_web.crx))*, kas pilda ierastās [Vārddieņa programmas](http://dl.dropbox.com/u/25130294/varddienis.zip) un sīkrīka funkcijas. Aplikācija veidota, izmantojot jaunākos HTM5 un JavaScript risinājumus - **jQuery** un **jQueryMobile**, kas to padara daudz pievilcīgāku un ērtāk lietojamu ikvienam interesentam.
+**Vārddienis WEB** ir īpaši veidota saite, kas pilda ierastās [Vārddieņa programmas](http://dl.dropbox.com/u/25130294/varddienis.zip) un sīkrīka funkcijas. Aplikācija veidota, izmantojot jaunākos HTM5 un JavaScript risinājumus - **jQuery** un **jQueryMobile**, kas to padara daudz pievilcīgāku un ērtāk lietojamu ikvienam interesentam.
 
 Šis projekts tika izveidots, lai ļautu izmantot [Vārddieņa funkcijas](http://dl.dropbox.com/u/25130294/varddienis.zip) arī mobilajās ierīcēs *(Android, Symbian, iPhone, J2ME, ...)*, kā arī Linux un Mac datoros, kam iepriekš šāda iespēja nebija pieejama.
 
@@ -51,16 +46,12 @@ Projekta veidošanā izmantotās programmas un servisi:
 
 - [GitHub](https://github.com/)
 - [Git](http://git-scm.com/) (1.7.10.0)
-- [Notepad++](http://notepad-plus-plus.org/) (6.1.4)
 - [JavaScript Compressor](http://www.minifyjavascript.com/)
-- [MarkdownPad](http://markdownpad.com) (1.3.3.1)
-- [Google Chrome](https://www.google.com/chrome?hl=lv) (20.0.1)
-- [Opera](http://www.opera.com) (12.00)
-- [RegExr](http://www.gskinner.com/RegExr/) (0.3.1b)
+- [Geany](http://www.geany.org) (0.21)
 
 Iekļautie projekti, resursi:
 
-- [jQueryMobile](http://jquerymobile.com) (1.1.1 RC1)
+- [jQueryMobile](http://jquerymobile.com) (1.2.0 ALPHA 1)
 - [jQuery](http://jquery.com) (1.7.1)
 - [Glossify noformējums](http://www.mobjectify.com/resources/Glossify_theme_for_jquery_mobile/)
 - [GitHub Ribbon (josla)](https://github.com/blog/273-github-ribbons)
