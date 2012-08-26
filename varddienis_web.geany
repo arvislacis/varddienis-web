@@ -17,8 +17,8 @@ long_line_behaviour=1
 long_line_column=72
 
 [files]
-current_page=3
-FILE_NAME_0=553;HTML;0;16;1;1;0;/home/arvis/Projekti/varddienis_web/index.html;0;4
+current_page=0
+FILE_NAME_0=954;HTML;0;16;1;1;0;/home/arvis/Projekti/varddienis_web/index.html;0;4
 FILE_NAME_1=0;Javascript;0;16;1;1;0;/home/arvis/Projekti/varddienis_web/js/varddienis.js;0;4
 FILE_NAME_2=0;Javascript;0;16;1;1;0;/home/arvis/Projekti/varddienis_web/js/varddienis.min.js;0;4
 FILE_NAME_3=2978;Markdown;0;16;1;1;0;/home/arvis/Projekti/varddienis_web/README.md;0;4
