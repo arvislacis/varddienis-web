@@ -1,4 +1,4 @@
-﻿// Copyrights © 2010-2012 Arvis Lācis
+﻿// Copyrights © 2010-2015 Arvis Lācis
 // arvis.lacis@gmail.com | http://twitter.com/arvislacis | http://al.id.lv
 /* jslint evil: true, plusplus: true, sloppy: true, indent: 4, maxerr: 50 */
 /* global $: false, setInterval: false, setTimeout: false, window: false */

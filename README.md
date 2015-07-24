@@ -2,7 +2,7 @@
 
 Vārddieņa WEB vietnes:
 
-- **[http://web.al.id.lv](http://web.al.id.lv)**;
+- **[http://varddienis.al.id.lv](http://varddieis.al.id.lv)**;
 - **[http://arvislacis.github.com/varddienis_web/](http://arvislacis.github.com/varddienis_web/)**;
 
 ## Kas ir Vārddienis WEB? ##
@@ -32,26 +32,17 @@ Reizi pa reizītei kļūdas pieļauj ikviens, tādēļ, ja kādu nepilnību, apl
 
 Tāpat droši varat lejupielādēt un modificēt šeit pieejamo pirmkodu *(tik tālu, cik tas neaizskar mani un neceļ neslavu šim projektam)*. Ja esat izlabojis kādu nozīmīgu **Vārddieņa WEB** kļūdu vai arī pievienojis jaunu, ļoti noderīgu funkciju, tad droši varat veikt `Pull Request`.
 
-## Atbalsts ##
-
-Ja esat **[Mobilly](http://www.mobilly.lv)** lietotājs, varat atbalstīt **Vārddieņa WEB** projektu, nosūtot SMS ar tekstu `SEND X.XX LACIS` *(kur X.XX ir ziedojuma summa, piemēram, 0.50, kas atbilst 0,50 Ls)* uz numuru `1859`.
-
-**Liels paldies ikvienam atbalstītājam, Jūsu ziedojumi tiks izmantoti šī un citu projektu attīstībai, izveidei!**
-
-----------
-
 ## Izmantotie resursi (atsauces) ##
 
 Projekta veidošanā izmantotās programmas un servisi:
 
+- [Atom](http://atom.io) (1.0.0)
+- [Git](http://git-scm.com/) (1.9.1)
 - [GitHub](https://github.com/)
-- [Git](http://git-scm.com/) (1.7.10.0)
 - [JavaScript Compressor](http://www.minifyjavascript.com/)
-- [Geany](http://www.geany.org) (0.21)
 
 Iekļautie projekti, resursi:
 
-- [jQueryMobile](http://jquerymobile.com) (1.2.0 ALPHA 1)
-- [jQuery](http://jquery.com) (1.7.1)
-- [Glossify noformējums](http://www.mobjectify.com/resources/Glossify_theme_for_jquery_mobile/)
+- [jQueryMobile](http://jquerymobile.com) (1.4.5)
+- [jQuery](http://jquery.com) (2.1.4)
 - [GitHub Ribbon (josla)](https://github.com/blog/273-github-ribbons)
