@@ -1,7 +1,7 @@
-﻿// Copyrights © 2010-2012 Arvis Lācis
-// arvis.lacis@inbox.lv | http://twitter.com/arvislacis | http://alvd.org
-/*jslint evil: true, plusplus: true, sloppy: true, indent: 4, maxerr: 50 */
-/*global $: false, localStorage: false, setInterval: false, setTimeout: false, webkitNotifications: false, window: false, zina: false */
+﻿// Copyrights © 2010-2015 Arvis Lācis
+// arvis.lacis@gmail.com | http://twitter.com/arvislacis | http://al.id.lv
+/* jslint evil: true, plusplus: true, sloppy: true, indent: 4, maxerr: 50 */
+/* global $: false, setInterval: false, setTimeout: false, window: false */
 
 // Datu masīvi
 var ned_d = ["Svētdiena", "Pirmdiena", "Otrdiena", "Trešdiena", "Ceturtdiena", "Piektdiena", "Sestdiena"],
@@ -87,21 +87,7 @@ var ned_d = ["Svētdiena", "Pirmdiena", "Otrdiena", "Trešdiena", "Ceturtdiena",
 		273 : "Starptautiskā veco ļaužu diena",
 		303 : "Helovīni",
 		314 : "Lāčplēša diena",
-		322 : "Starptaustiskā vīriešu diena"},
-	taimeris = 0,
-	crx = false,
-	laiks;
-
-// Google Chrome paplašinājuma pārbaude
-if (window.webkitNotifications && window.webkitNotifications.checkPermission() === 0) {
-	crx = true;
-
-	laiks = localStorage.laiks;
-	if (laiks === undefined) {
-		localStorage.laiks = 900;
-		laiks = 900;
-	}
-}
+		322 : "Starptaustiskā vīriešu diena"};
 
 // Noformējuma un efektu fn
 function nof() {
@@ -116,10 +102,6 @@ function nof() {
 	$(".d2").css({"font-weight" : "bold"});
 
 	$("a[href*='://']").attr({"target" : "_window"});
-
-	if (crx) {
-		$("#iest").attr({"href" : "#opcijas", "title" : ""});
-	}
 }
 
 // Šodienas fn
@@ -290,29 +272,7 @@ function sodiena() {
 	$(".svetki").html("<span class='sv'>" + sve + "</span><span class='at'>" + atz + "</span>");
 
 	nof();
-
-	if ((taimeris - 1) < laiks && taimeris !== 0) {
-		taimeris = taimeris + 1;
-	} else {
-		taimeris = 1;
-		zina(sod, $(".datums").html(), 7500, true);
-	}
-
 	setTimeout(sodiena, 1000);
-}
-
-// Paziņojuma fn (Google Chrome paplašinājumam)
-function zina(txt, txt2, tm, mz) {
-	if (crx) {
-		var logs = window.webkitNotifications.createNotification('', txt, txt2);
-		logs.show();
-
-		if (mz) {
-			$("body").append("<audio src='./sound/skana.wav' autoplay='true' />");
-		}
-
-		setTimeout(function () {logs.cancel(); }, tm);
-	}
 }
 
 // MDPV fn
@@ -389,14 +349,5 @@ $(function () {
 
 	$("#mvpdp").click(function () {
 		mvpd();
-	});
-
-	$("#opcijas").live("pagecreate", function () {
-		$("#laiks").val(localStorage.laiks);
-	});
-
-	$("#saglabat").click(function () {
-		localStorage.laiks = $("#laiks").val();
-		laiks = $("#laiks").val();
 	});
 });
