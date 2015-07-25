@@ -89,7 +89,8 @@ var ned_d = ["Svētdiena", "Pirmdiena", "Otrdiena", "Trešdiena", "Ceturtdiena",
 		314 : "Lāčplēša diena",
 		322 : "Starptaustiskā vīriešu diena"};
 
-// Noformējuma un efektu fn
+// Funkcija atsevišķiem noformējuma elementiem
+// TODO: Iespējams realizēt CSS pusē
 function nof() {
 	$(".v").css({"color" : "blue", "font-weight" : "bold"});
 	$(".sv").css({"color" : "darkred"});
@@ -104,7 +105,7 @@ function nof() {
 	$("a[href*='://']").attr({"target" : "_window"});
 }
 
-// Šodienas fn
+// Funkcija šodienas vārda dienu gaviļnieku attēlošanai
 function sodiena() {
 	var d = new Date(),
 		gads = d.getFullYear(),
@@ -127,7 +128,12 @@ function sodiena() {
 		dati = Math.floor((gads / 19 - Math.floor(gads / 19)) * 1000),
 		plnm_d = plnm[dati],
 		plnm_s = snr - plnm_d;
-	// Pareiza datuma un laika izvadīšana
+
+	// Datuma un laika izvadīšana
+	if (stu < 10) {
+		stu = "0" + stu;
+	}
+
 	if (min < 10) {
 		min = "0" + min;
 	}
@@ -139,7 +145,7 @@ function sodiena() {
 	$(".datums").html(ned_d[n_d] + ", " + gads + ". gada " + die + ". " + menesi[men]);
 	$(".laiks").html(stu + ":" + min + ":" + sek);
 
-	// Garais, īsais gads
+	// Garā/īsā gada noteikšana
 	if (gads % 4 === 0) {
 		if (gads % 100 === 0) {
 			if (gads % 400 === 0) {
@@ -154,7 +160,7 @@ function sodiena() {
         gada_i = 1;
 	}
 
-	// Vārda dienu izvadīšana
+	// Izvada šodienas un rītdienas vārda dienu gaviļniekus
 	if (gada_i === 0 && men === 1 && die === 28) {
 		$(".v_d").html("Šodien vārda dienu svin <span class='v'>" + sod + ".</span><br />Rīt vārda dienu neviens nesvinēs.");
 	} else {
@@ -184,7 +190,7 @@ function sodiena() {
 		gal2 = "";
 	}
 
-	$(".d_info").html("Gada <span class='d2'>" + die_g + "</span>. diena. Līdz gada beigām atliku" + gal1 + " <span class='d2'>" + atl_d + "</span> diena" + gal2 + ".");
+	$(".d_info").html("Šī ir gada <span class='d2'>" + die_g + "</span>. diena. Līdz gada beigām atliku" + gal1 + " <span class='d2'>" + atl_d + "</span> diena" + gal2 + ".");
 
 	if (men === 2 && die > 23 && die < 31 && n_d === 6 && stu > 15) {
 		$(".d_info").html($(".d_info").html() + "<br/><strong>Neaizmirstiet šonakt pagriezt pulksteņus vienu stundu uz priekšu</strong>.");
@@ -193,7 +199,7 @@ function sodiena() {
 		$(".d_info").html($(".d_info").html() + "<br/><strong>Neaizmirstiet šonakt pagriezt pulksteņus vienu stundu atpakaļ</strong>.");
 	}
 
-	// Svētki
+	// Svētku dienu noteikšana
 	if (sv_d[snr] !== undefined) {
 		sve = sv_d[snr] + "<br/>";
 	}
@@ -201,18 +207,23 @@ function sodiena() {
 	if (men === 4 && die > 7 && die < 15 && n_d === 0) {
 		sve = sve + "Mātes diena<br/>";
 	}
+
 	if (snr > plnm_d && plnm_s < 6 && n_d === 5) {
 		sve = sve + "Lielā piektdiena<br/>";
 	}
+
 	if (snr > plnm_d && plnm_s < 8 && n_d === 0) {
 		sve = sve + "Pirmās Lieldienas<br/>";
 	}
+
 	if (plnm_s > 1 && plnm_s < 9 && n_d === 1) {
 		sve = sve + "Otrās Lieldienas<br/>";
 	}
+
 	if (plnm_s > 49 && plnm_s < 57 && n_d === 0) {
 		sve = sve + "Vasarsvētki<br/>";
 	}
+
 	if (snr === 321) {
 		sve = sve + "Latvijas Republikas Proklamēšanas diena (" + (gads - 1918) + ". gadadiena)<br/>";
 	}
@@ -220,9 +231,11 @@ function sodiena() {
 	if (at_d[snr] !== undefined) {
 		atz = at_d[snr] + "<br/>";
 	}
+
 	if (snr > plnm_d && plnm_s < 5 && n_d === 4) {
 		atz = atz + "Zaļā ceturtdiena<br/>";
 	}
+
 	if (gada_i === 1 && snr === 139) {
 		atz = atz + "Tviterdiena (gada 140. diena) <a href='http://twitterday.org/lv/'>#twitterday</a><br/>";
 	} else {
@@ -230,21 +243,27 @@ function sodiena() {
 			atz = atz + "Tviterdiena (gada 140. diena) <a href='http://twitterday.org/lv/'>#twitterday</a><br/>";
 		}
 	}
+
 	if (men === 5 && die > 14 && die < 22 && n_d === 0) {
 		atz = atz + "Ugunsdzēsēju un glābēju diena<br/>";
 	}
+
 	if (men === 6 && die > 7 && die < 15 && n_d === 6) {
 		atz = atz + "Jūras svētku diena<br/>";
 	}
+
 	if (men === 6 && die > 24 && n_d === 5) {
 		atz = atz + "Sistēmas administratoru diena <a href='http://www.sysadminday.com'>#SysAdminDay</a><br/>";
 	}
+
 	if (men === 7 && die === 31) {
 		atz = atz + "Blogotāju diena <a href='http://www.blogday.org'>#BlogDay</a><br/>";
 	}
+
 	if (men === 8 && die === 9) {
 		atz = atz + "Testētāju diena<br/>";
 	}
+
 	if (gada_i === 1 && snr === 255) {
 		atz = atz + "Programmētāju diena (gada 256. diena) <a href='http://www.programmerday.info'>#ProgrammerDay</a><br/>";
 	} else {
@@ -252,15 +271,19 @@ function sodiena() {
 			atz = atz + "Programmētāju diena (gada 256. diena) <a href='http://www.programmerday.info'>#ProgrammerDay</a><br/>";
 		}
 	}
+
 	if (men === 8 && die > 7 && die < 15 && n_d === 0) {
 		atz = atz + "Tēva diena<br/>";
 	}
+
 	if (men === 9 && die > 0 && die < 8 && n_d === 0) {
 		atz = atz + "Skolotāju diena<br/>";
 	}
+
 	if (men === 10 && die > 7 && die < 15 && n_d === 2) {
 		atz = atz + "Sociālo darbinieku diena<br/>";
 	}
+
 	if (men === 11 && die > 0 && die < 8 && n_d === 0) {
 		atz = atz + "Pret latviešu tautu vērstā totalitārā komunistiskā režīma genocīda upuru piemiņas diena<br/>";
 	}
@@ -275,7 +298,7 @@ function sodiena() {
 	setTimeout(sodiena, 1000);
 }
 
-// MDPV fn
+// Funkcija "Meklēt datumu pēc vārda"
 function mdpv() {
 	var pv, pvm, pvp, i, i2, m, r;
 
@@ -309,7 +332,7 @@ function mdpv() {
 	}
 }
 
-// MVPD fn
+// Funkcija "Meklēt vārdu pēc datuma"
 function mvpd() {
 	var mv = $("#mvpd").scroller("getDate"),
 		mvm = mv.getMonth(),
@@ -317,10 +340,10 @@ function mvpd() {
 
 	$("#mvpd_i").fadeOut(400, function () {
 		$(this).html("<span class='d2'>" + mvd + ". " + menIn[mvm] + "</span> savu vārda dienu svin <span class='v'>" + (v[d_sk[mvm] + mvd]).replace(/(?!^)[A-ZĀČĒĢĪĶĻŅŠŪŽ]/g, ", $&") + "</span>.").fadeIn(800, nof());
-	});
+	});n
 }
 
-// Galvenā fn
+// Galvenā funkcija
 $(function () {
 	sodiena();
 	nof();
@@ -329,7 +352,7 @@ $(function () {
 	$("#mvpd").scroller({preset: "date", dateOrder: "DD, d. MM", dateFormat: "DD, d. MM", width: "250",
 		dayNames: ["Svētdiena", "Pirmdiena", "Otrdiena", "Trešdiena", "Ceturtdiena", "Piektdiena", "Sestdiena"],
 		monthNames: ["janvāris", "februāris", "marts", "aprīlis", "maijs", "jūnijs", "jūlijs", "augusts", "septembris", "oktobris", "novembris", "decembris"],
-		dayText: "Diena", monthText: "Mēnesis",  display: "inline", mode: "mixed", theme: "jqm"});
+		dayText: "Diena", monthText: "Mēnesis",  display: "inline", mode: "scroller", theme: "jqm"});
 
 	$("a").click(function () {
 		$(this).fadeTo("slow", 0.5).fadeTo("def", 1);
