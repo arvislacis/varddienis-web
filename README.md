@@ -2,14 +2,14 @@
 
 Vārddieņa WEB tīmekļa vietnes:
 
-- **[http://varddienis.al.id.lv](http://varddieis.al.id.lv) ** (izmantošana);
+- **[http://varddienis.al.id.lv](http://varddieis.al.id.lv)** (izmantošana);
 - **[http://arvislacis.github.com/varddienis_web/](http://arvislacis.github.com/varddienis_web)** (pirmkods, apraksts);
 
 ## Kas ir Vārddienis WEB? ##
 
 **Vārddienis WEB** ir tīmekļa vietne, kas pilda [Vārddieņa programmas](https://dl.dropboxusercontent.com/u/25130294/Vecie/varddienis/varddienis.zip) un [sīkrīka](https://dl.dropboxusercontent.com/u/25130294/Vecie/varddienis/varddienis.gadget) funkcijas. Lapa veidota, izmantojot mūsdienās plaši pielietotās HTML5 un JavaScript tehnoloģijas - **jQuery** un **jQuery Mobile**.
 
-Šis projekts tika izveidots, lai ļautu izmantot [Vārddieņa funkcijas](http://dl.dropbox.com/u/25130294/varddienis.zip) arī mobilajās ierīcēs *(Android, Symbian, iPhone, J2ME, ...)*, kā arī Linux un Mac datoros, kam iepriekš šāda iespēja nebija pieejama.
+Šis projekts tika izstrādāts, lai ļautu izmantot [Vārddieņa funkcijas](http://dl.dropbox.com/u/25130294/varddienis.zip) arī mobilajās ierīcēs *(Android, iPhone, J2ME, ...)*, kā arī Linux un Mac datoros, kam iepriekš šāda iespēja nebija pieejama.
 
 ## Saderīgās ierīces ##
 
