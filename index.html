@@ -5,20 +5,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Vārddienis WEB</title>
 	<link rel="shortcut icon" href="img/ikona16.png">
-	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
-	<link rel="stylesheet" href="css/mobiscroll-2.0.custom.min.css">
-	<script src="js/jquery-2.1.4.min.js"></script>
-	<script src="js/varddienis.min.js"></script>
-	<script src="js/jquery.mobile-1.4.5.min.js"></script>
-	<script src="js/mobiscroll-2.0.custom.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile.datepicker-0.1.9.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile.datepicker.theme-0.1.9.css">
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/varddienis.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile.datepicker-0.1.1.js"></script>
+	<script type="text/javascript" src="js/jquery.ui.datepicker-1.10.4.js"></script>
 </head>
 <body>
-	<div data-role="page" data-title="Vārddienis WEB" data-theme="a" id="galvenais">
+	<div data-role="page" data-title="Vārddienis WEB" data-theme="a" id="sakums">
 		<div data-role="header" data-theme="b">
-			<h1>Vārddienis WEB v1.8.8</h1>
+			<h1>Vārddienis WEB v1.9.0</h1>
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#galvenais" data-icon="home" class="ui-btn-active">Sākums</a></li>
+					<li><a href="#sakums" data-icon="home" class="ui-btn-active">Sākums</a></li>
 					<li><a href="#meklet" data-icon="search" data-transition="slide">Meklēt</a></li>
 					<li><a href="#par" data-icon="info"  data-rel="dialog" data-transition="slidedown">Par...</a></li>
 					<li><a href="https://github.com/arvislacis/varddienis-web/blob/master/README.md" data-icon="search" title="Pēc atvēršanas izlasiet README.md datni">Palīdzība</a></li>
@@ -57,7 +59,7 @@
 			<h1>Meklēšana</h1>
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#galvenais" data-icon="home" data-transition="slide">Sākums</a></li>
+					<li><a href="#sakums" data-icon="home" data-transition="slide">Sākums</a></li>
 					<li><a href="#meklet" data-icon="search" class="ui-btn-active">Meklēt</a></li>
 					<li><a href="#par" data-icon="info"  data-rel="dialog" data-transition="slidedown">Par...</a></li>
 					<li><a href="https://github.com/arvislacis/varddienis-web/blob/master/README.md" data-icon="info" title="Pēc atvēršanas skatīt README.md failu">Palīdzība</a></li>
@@ -83,7 +85,8 @@
 				<h3>Meklēt datumu pēc vārda</h3>
 				<div class="ui-grid-a">
 					<div class="ui-block-a">
-						<div data-role="fieldcontain"><label for="mdpv">Ievadiet personvārdu:</label>
+						<div data-role="fieldcontain">
+							<label for="mdpv">Ievadiet personvārdu:</label>
 							<input type="text" maxlength="11" id="mdpv">
 						</div>
 					</div>
@@ -97,8 +100,9 @@
 				<h3>Meklēt vārdus pēc datuma</h3>
 				<div class="ui-grid-a">
 					<div class="ui-block-a">
-						<div data-role="fieldcontain"><label for="mvpd">Izvēlieties datumu:</label>
-						<input id="mvpd">
+						<div data-role="fieldcontain">
+							<label for="mvpd">Izvēlieties datumu:</label>
+							<input type="text" data-role="date" id="mvpd">
 						</div>
 					</div>
 					<div class="ui-block-b">
@@ -117,7 +121,7 @@
 			<h1>Par...</h1>
 		</div>
 		<div data-role="content">
-			<h3>Vārddienis WEB v1.8.8</h3>
+			<h3>Vārddienis WEB v1.9.0</h3>
 			<h5>Pēdējo reizi atjaunināts: <em>2015. gada 2. augustā</em>.
 			<br>
 			Copyrights © 2010-2015 Arvis Lācis (@arvislacis)

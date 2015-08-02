@@ -15,6 +15,7 @@ var ned_d = ["Svētdiena", "Pirmdiena", "Otrdiena", "Trešdiena", "Ceturtdiena",
 		123 : "Latvijas Republikas Neatkarības atjaunošanas diena",
 		173 : "Līgo diena",
 		174 : "Jāņu diena",
+		321 : "Latvijas Republikas Proklamēšanas diena",
 		357 : "Ziemassvētku priekšvakars",
 		358 : "Pirmie Ziemassvētki",
 		359 : "Otrie Ziemassvētki",
@@ -288,13 +289,13 @@ function mdpv() {
 
 // Funkcija "Meklēt vārdu pēc datuma"
 function mvpd() {
-	var mv = $("#mvpd").scroller("getDate"),
+	var mv = $("#mvpd").datepicker("getDate"),
 		mvm = mv.getMonth(),
 		mvd = mv.getDate();
 
 	$("#mvpd_i").fadeOut(400, function () {
 		$(this).html("<span class='d2'>" + mvd + ". " + menIn[mvm] + "</span> savu vārda dienu svin <span class='v'>" + (v[d_sk[mvm] + mvd]) + "</span>.").fadeIn(800, nof());
-	});n
+	});
 }
 
 // Galvenā funkcija
@@ -303,18 +304,14 @@ $(function () {
 	nof();
 
 	$(".info").html("");
-	$("#mvpd").scroller({
-		preset: "date",
-		dateOrder: "DD, d. MM",
-		dateFormat: "DD, d. MM",
-		width: "250",
+	$("#mvpd").datepicker({
+		dateFormat: "dd.mm.yy",
 		dayNames: ["Svētdiena", "Pirmdiena", "Otrdiena", "Trešdiena", "Ceturtdiena", "Piektdiena", "Sestdiena"],
-		monthNames: ["janvāris", "februāris", "marts", "aprīlis", "maijs", "jūnijs", "jūlijs", "augusts", "septembris", "oktobris", "novembris", "decembris"],
-		dayText: "Diena",
-		monthText: "Mēnesis",
-		display: "inline",
-		mode: "scroller",
-		theme: "jqm"
+		dayNamesMin: ["Sv", "Pr", "Ot", "Tr", "Ce", "Pk", "Se"],
+		monthNames: ["Janvāris", "Februāris", "Marts", "Aprīlis", "Maijs", "Jūnijs", "Jūlijs", "Augusts", "Septembris", "Oktobris", "Novembris", "Decembris"],
+		nextText: "Nākamais mēnesis",
+		prevText: "Iepriekšējais mēnesis",
+		firstDay: 1
 	});
 
 	$("a").click(function () {
