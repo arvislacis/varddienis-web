@@ -1,21 +1,21 @@
 # Vārddienis WEB #
 
-Vārddieņa WEB tīmekļa vietnes:
+Ar Vārddieni WEB saistītās tīmekļa vietnes:
 
-- **[http://varddienis.al.id.lv](http://varddienis.al.id.lv)** (izmantošana);
-- **[https://github.com/arvislacis/varddienis-web](https://github.com/arvislacis/varddienis-web)** (pirmkods, apraksts);
+- **[http://varddienis.al.id.lv](http://varddienis.al.id.lv)** (izmantošana; demonstrācija);
+- **[https://github.com/arvislacis/varddienis-web](https://github.com/arvislacis/varddienis-web)** (pirmkods; apraksts);
 
 ## Kas ir Vārddienis WEB? ##
 
-![GitHub Logo](/img/varddienis-web.png)
+![Vārddienis WEB ekrānuzņēmums](/img/varddienis-web.png)
 
 **Vārddienis WEB** ir tīmekļa vietne, kas pilda [Vārddieņa programmas](https://dl.dropboxusercontent.com/u/25130294/Vecie/varddienis/varddienis.zip) un [sīkrīka](https://dl.dropboxusercontent.com/u/25130294/Vecie/varddienis/varddienis.gadget) funkcijas. Lapa veidota, izmantojot mūsdienās plaši pielietotās HTML5 un JavaScript tehnoloģijas - **jQuery** un **jQuery Mobile**.
 
-Šis projekts tika izstrādāts, lai ļautu izmantot [Vārddieņa funkcijas](http://dl.dropbox.com/u/25130294/varddienis.zip) arī mobilajās ierīcēs *(Android, iPhone, J2ME, ...)*, kā arī Linux un Mac datoros, kam iepriekš šāda iespēja nebija pieejama.
+Šis projekts tika izstrādāts, lai ļautu izmantot [Vārddieņa funkcijas](https://dl.dropboxusercontent.com/u/25130294/Vecie/varddienis/varddienis.zip) mobilajās ierīcēs *(Android, iPhone, J2ME, ...)*, kā arī Linux un Mac datoros, kam iepriekš šāda iespēja nebija pieejama.
 
 ## Saderīgās ierīces ##
 
-**Vārddieni WEB var izmantot lielākajā daļā ierīču un pārlūkprogrammu** *(datoros, planšetdatoros, mobilajos telefonos u.c.)*, kas atbalsta jaunākos HTML5 un JavaScript standartus. Atsevišķi dizaina elementi un animācijas vecākās ierīcēs, pārlūkprogrammās var netikt attēloti vai var tikt attēloti nepilnīgi; detalizēts un apstiprināts saraksts ar atbalstītajām platformām un pārlūkprogrammām apskatāms šeit: [http://jquerymobile.com/browser-support/1.4/](http://jquerymobile.com/browser-support/1.4/).
+**Vārddieni WEB var izmantot lielākajā daļā ierīču un pārlūkprogrammu** *(datoros, planšetdatoros, mobilajos telefonos u.c.)*, kas atbalsta jaunākos HTML5 un JavaScript standartus. Atsevišķi dizaina elementi un animācijas vecākās ierīcēs, pārlūkprogrammās var netikt attēloti vai var tikt attēloti nepilnīgi; detalizēts un apstiprināts saraksts ar atbalstītajām platformām un pārlūkprogrammām aplūkojams šeit: [http://jquerymobile.com/browser-support/1.4/](http://jquerymobile.com/browser-support/1.4/).
 
 **Pazīstamāko pārlūkprogrammu atbalsts:**
 
@@ -28,9 +28,9 @@ Vārddieņa WEB tīmekļa vietnes:
 - UC Browser;
 - Opera Mini 7+.
 
-## Kā līdzdarboties šī projekta attīstībā? ##
+## Kā līdzdarboties projekta attīstībā? ##
 
-Reizi pa reizītei kļūdas pieļauj ikviens, tādēļ, ja gadās pamanīt kādu nepilnību, aplamību vai arī ja jums ir kādi ieteikumi, jaunas idejas, tad to iespējams norādīt šīs lapas *[Issues](https://github.com/arvislacis/varddienis_web/issues)* sadaļā.
+Lielākas vai mazākas kļūdas pieļauj ikviens, tādēļ, ja gadās pamanīt kādu nepilnību, aplamību vai arī ja jums ir ieteikumi, jaunas idejas, tad tās iespējams norādīt šīs lapas *[Issues](https://github.com/arvislacis/varddienis_web/issues)* sadaļā.
 
 Šeit publicēto pirmkodu atļauts lejupielādēt un modificēt, atbilstoši [MIT licenses](http://opensource.org/licenses/MIT) noteikumiem.
 
